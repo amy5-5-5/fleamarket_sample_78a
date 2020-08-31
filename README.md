@@ -24,9 +24,9 @@ Things you may want to cover:
 * ...
 
 
-## DB設計
+# DB設計
 
-### Usersテーブル（devise使用）
+## Usersテーブル（devise使用）
 
 |Column|Type|Options|
 |------|----|-------|
@@ -43,7 +43,12 @@ Things you may want to cover:
 |password|text|null: false|
 |encripted_password|text|null: false|
 
-### Itemsテーブル
+### Association
+* has_many items
+* has_one credit_card
+* has_many comments
+
+## Itemsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -51,19 +56,29 @@ Things you may want to cover:
 |price|integer|null: false|
 |text|text|null: false|
 |shipping_date|string|null: false|
-|category_id|references|foreign_key: true, null: false|
 |brand_id|references|foreign_key: true|
 |user_id|references|foreign_key: true, null: false|
 |comment_id|references|foreign_key: true|
-|image_id|references|foreign_key: true|
 
-### Imagesテーブル
+### Association
+* belongs_to user
+* belongs_to brand
+* has_many images
+* has_many item_categories
+* has_many categories, through: item_categories
+* has_many comments
+
+
+## Imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |src|string|null: false|
 |item_id|references|foreign_key: true|
 
-### Credit_cardsテーブル
+### Association
+* belongs_to item
+
+## Credit_cardsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -73,31 +88,50 @@ Things you may want to cover:
 |name|string|null: false|
 |user_id|integer|null: false|
 
-### Categorysテーブル
+### Association
+* belongs_to user
+
+## Categoriesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 
-### Items_Categorysテーブル（中間テーブル）
+### Association
+* has_many item_categories
+* has_many items, through: item_categories
+
+## Items_Categorysテーブル（中間テーブル）
 
 |Column|Type|Options|
 |------|----|-------|
 |item_id|references|foreign_key: true|
 |category_id|references|foreign_key: true|
 
-### Brandsテーブル
+### Association
+* belongs_to item
+* belongs_to category
+
+## Brandsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, unique: true|
 
-### Commentsテーブル
+### Association
+* has_many items
+
+## Commentsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |content|text|null: false|
 |user_id|references|foreign_key: true|
+|item_id|references|foreign_key: true|
+
+### Association
+* belongs_to user
+* belongs_to item
 
 
 
