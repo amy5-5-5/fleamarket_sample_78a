@@ -39,7 +39,7 @@ Things you may want to cover:
 |city|string|null: false|
 |street|text|null: false|
 |post_code|integer|null: false|
-|email|string|unique: true|
+|email|string|null: false, unique: true|
 |password|text|null: false|
 |encripted_password|text|null: false|
 
