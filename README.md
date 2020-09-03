@@ -101,7 +101,7 @@ Things you may want to cover:
 * has_many item_categories
 * has_many items, through: item_categories
 
-## Items_Categorysテーブル（中間テーブル）
+## Items_Categoriesテーブル（中間テーブル）
 
 |Column|Type|Options|
 |------|----|-------|
