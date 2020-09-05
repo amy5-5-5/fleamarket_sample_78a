@@ -111,7 +111,7 @@ Things you may want to cover:
 * belongs_to category
 
 
-## Items_Categoriesテーブル（中間テーブル）
+## Item_Categoriesテーブル（中間テーブル）
 |Column|Type|Options|
 |------|----|-------|
 |item_id|references|foreign_key: true|
