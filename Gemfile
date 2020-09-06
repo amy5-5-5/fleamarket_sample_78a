@@ -66,3 +66,4 @@ end
 
 gem 'carrierwave'
 gem 'fog-aws'
+gem 'ancestry'
