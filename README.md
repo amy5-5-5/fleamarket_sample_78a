@@ -44,21 +44,9 @@ Things you may want to cover:
 
 ### Association
 * has_many items
-* has_one credit_card
 * has_many comments
 * has_many likes
 
-## Credit_cardsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|card_number|integer|null: false|
-|exp_date|date|null: false|
-|security_number|integer|null: false|
-|name|string|null: false|
-|user_id|references|foreign_key: true|
-
-### Association
-* belongs_to user
 
 ## Itemsテーブル
 |Column|Type|Options|
