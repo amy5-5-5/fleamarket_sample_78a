@@ -58,13 +58,13 @@ Things you may want to cover:
 |shipping_date|string|null: false|
 |brand_id|references|foreign_key: true|
 |user_id|references|foreign_key: true, null: false|
+|category_id|referemces|foreign_key: ture|
 
 ### Association
 * belongs_to user
 * belongs_to brand
+* belongs_to category
 * has_many images
-* has_many item_categories
-* has_many categories, through: item_categories
 * has_many comments
 * has_many likes
 
@@ -83,31 +83,15 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
+|ancestry|string||
 
 ### Association
-* has_many sub_categries
-* has_many item_categories
-* has_many items, through: item_categories
-
-## Sub_Categoriesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|categoriy_id|references|foreign_key: true|
-
-### Association
-* belongs_to category
+* has_many items
+* has_ancestry
 
 
-## Item_Categoriesテーブル（中間テーブル）
-|Column|Type|Options|
-|------|----|-------|
-|item_id|references|foreign_key: true|
-|category_id|references|foreign_key: true|
 
-### Association
-* belongs_to item
-* belongs_to category
+
 
 ## Brandsテーブル
 |Column|Type|Options|
