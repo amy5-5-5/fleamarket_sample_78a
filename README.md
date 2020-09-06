@@ -27,7 +27,6 @@ Things you may want to cover:
 # DB設計
 
 ## Usersテーブル（devise使用）
-
 |Column|Type|Options|
 |------|----|-------|
 |nickname|string|null: false|
@@ -39,34 +38,35 @@ Things you may want to cover:
 |city|string|null: false|
 |street|text|null: false|
 |post_code|integer|null: false|
-|email|string|unique: true|
+|email|string|null: false, unique: true|
 |password|text|null: false|
 |encripted_password|text|null: false|
 
 ### Association
 * has_many items
-* has_one credit_card
 * has_many comments
+* has_many likes
+
 
 ## Itemsテーブル
-
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 |price|integer|null: false|
 |text|text|null: false|
+|size|string||
 |shipping_date|string|null: false|
 |brand_id|references|foreign_key: true|
 |user_id|references|foreign_key: true, null: false|
-|comment_id|references|foreign_key: true|
+|category_id|referemces|foreign_key: ture|
 
 ### Association
 * belongs_to user
 * belongs_to brand
+* belongs_to category
 * has_many images
-* has_many item_categories
-* has_many categories, through: item_categories
 * has_many comments
+* has_many likes
 
 
 ## Imagesテーブル
@@ -78,42 +78,22 @@ Things you may want to cover:
 ### Association
 * belongs_to item
 
-## Credit_cardsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|card_number|integer|null: false|
-|exp_date|date|null: false|
-|security_number|integer|null: false|
-|name|string|null: false|
-|user_id|integer|null: false|
-
-### Association
-* belongs_to user
 
 ## Categoriesテーブル
-
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
+|ancestry|string||
 
 ### Association
-* has_many item_categories
-* has_many items, through: item_categories
+* has_many items
+* has_ancestry
 
-## Items_Categorysテーブル（中間テーブル）
 
-|Column|Type|Options|
-|------|----|-------|
-|item_id|references|foreign_key: true|
-|category_id|references|foreign_key: true|
 
-### Association
-* belongs_to item
-* belongs_to category
+
 
 ## Brandsテーブル
-
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, unique: true|
@@ -122,7 +102,6 @@ Things you may want to cover:
 * has_many items
 
 ## Commentsテーブル
-
 |Column|Type|Options|
 |------|----|-------|
 |content|text|null: false|
@@ -132,6 +111,17 @@ Things you may want to cover:
 ### Association
 * belongs_to user
 * belongs_to item
+
+## Likesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|references|foreign_key: true|
+|item_id|references|foreign_key: true|
+
+### Association
+* belongs_to user
+* belongs_to item
+
 
 
 
