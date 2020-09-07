@@ -9,4 +9,5 @@ class Item < ApplicationRecord
   validates :status, presence: true
 
   # あとでアソシエーション記述する
+  has_many :images
 end
