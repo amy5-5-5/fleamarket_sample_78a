@@ -1,3 +1,108 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.ItemNewContent {
+  width: 100vw;
+  height: 100%;
+  background-color: #f8f8f8;
+  .LogoWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 128px;
+    &__logo {
+      height: 49px;
+      width: 185px;
+      display: inline-block;
+    }
+  }
+  .ItemForm {
+    margin: 0 auto;
+    background-color: #fff;
+    height: 2000px;
+    width: 700px;
+    .labelArea {
+      display: flex;
+      .required {
+        font-size: 12px;
+        height: 20px;
+        font-weight: bold;
+        background-color: red;
+        margin: 10px 15px;
+        color: white;
+        padding: 0 4px;
+        border-radius: 2px;
+      }
+      .any {
+        font-size: 12px;
+        height: 20px;
+        font-weight: bold;
+        background-color: #ccc;
+        margin: 10px 15px;
+        color: white;
+        padding: 0 3px;
+        border-radius: 2px;
+      }
+    }
+    input,textarea {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .borderbottom {
+      border-bottom: 1px solid #efefef;
+      padding: 40px;
+    }
+    .headline {
+      color: gray;
+      margin-bottom: 10px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .priceArea {
+      display: flex;
+      justify-content: space-between;
+      &__input {
+        .enmark {
+          font-size: 16px;
+          height: 20px;
+          margin: 10px;
+        }
+        .priceInput {
+          width: 80%;
+        }
+      }
+    }
+    .itemInput {
+      width: 85%;
+      padding: 0 56px 0 16px;
+    }
+    .label {
+      font-size: 14px;
+      font-weight: 600;
+      margin: 10px 0;
+    }
+    .lineInput {
+      height: 48px;
+    }
+    &__submit {
+      width: 70%;
+      margin: 0 auto;
+      padding: 40px;
+      .exhibitionBtn {
+        display: inline-block;
+        border: none;
+        color: white;
+        font-weight: bold;
+        background-color: rgb(62, 236, 228);
+        width: 100%;
+        height: 50px;
+        margin-top: 30px;
+        cursor: pointer;
+      }
+    }
+  }
+  
+}
