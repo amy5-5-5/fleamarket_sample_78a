@@ -25,7 +25,7 @@
         %p.label カテゴリー
         %span.required 必須
       -# とりあえずフロント整えるためにinputタグ設置
-      %input.itemInput.lineInput
+      = f.collection_select :category_id, Category.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput lineInput"}
       .labelArea
         %p.label ブランド
         %span.any 任意
@@ -35,24 +35,24 @@
         %p.label 商品の状態
         %span.required 必須
       -# とりあえずフロント整えるためにinputタグ設置
-      %input.itemInput.lineInput
+      = f.collection_select :condition_id, Condition.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput lineInput"}
     .ItemForm__delivery.borderbottom
       %p.headline 配送について
       .labelArea
         %p.label 配送料の負担
         %span.required 必須
       -# とりあえずフロント整えるためにinputタグ設置
-      %input.itemInput.lineInput
+      = f.collection_select :burden_id, Burden.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput lineInput"}
       .labelArea
         %p.label 発送元の地域
         %span.required 必須
       -# とりあえずフロント整えるためにinputタグ設置
-      %input.itemInput.lineInput
+      = f.collection_select :area_id, Area.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput lineInput"}
       .labelArea
         %p.label 発送までの日数
         %span.required 必須
       -# とりあえずフロント整えるためにinputタグ設置
-      %input.itemInput.lineInput
+      = f.collection_select :shipping_date_id, ShippingDate.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput lineInput"}
     .ItemForm__price.borderbottom
       %p.headline 価格（¥300〜9,999,999）
       .priceArea
