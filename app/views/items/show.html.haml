@@ -1,0 +1,119 @@
+%body
+  %nav.breadCrumbs
+    %ul
+      %li
+        %a{:href => "/"} FURIMA
+      %li
+        %i.fa.fa-angle-right
+      %li
+        %a{:href => "#"} レディース
+      %li
+        %i.fa.fa-angle-right
+      %li
+        %a{:href => "#"} トップス
+      %li
+        %i.fa.fa-angle-right
+      %li
+        %a{:href => "#"} Tシャツ/カットソー(半袖/袖なし)
+      %li
+        %i.fa.fa-angle-right
+      %li
+        %p テスト
+  .main
+    .showMain 
+      .contentRight
+        .topContent
+          .itemBox
+            %h2.itemBox__name 
+              テスト
+            .itemBox__body
+              %ul.item1
+                %li.itemList1
+                  = image_tag "beef.jpeg" ,class: "img1"
+                  %ul.item2
+                    %li.itemList2
+                      = image_tag "beef2.jpeg" ,class: "img2"
+            .itemBox__price
+              %span.price
+                ¥10000 
+              .itemBox__price-detail
+                %span
+                  (税込)
+                %span
+                  送料込み  
+              .itemDetail テストテストテストテストテスト
+              .table
+                %table
+                  %tbody
+                    %tr
+                      %th 出品者
+                      %td あああ
+                    %tr
+                      %th カテゴリー
+                      %td
+                        %a{:href => "#"} レディース
+                        %br/
+                        %a{:href => "#"} トップス
+                        %br/
+                        %a{:href => "#"} Tシャツ/カットソー(半袖/袖なし)
+                    %tr
+                      %th ブランド
+                      %td
+                    %tr
+                      %th 商品のサイズ
+                      %td
+                    %tr
+                      %th 商品の状態
+                      %td 新品/未使用
+                    %tr
+                      %th 配送料の負担
+                      %td 送料込み（出品者負担）
+                    %tr
+                      %th 発送元の地域
+                      %td
+                        %a{:href => "#"} 北海道
+                    %tr
+                      %th 発送日の目安
+                      %td 1-2日で発送
+              .optionalArea
+                %ul
+                  %li#likeBtn.optionalBtn.likeBtn
+                    %i.fa.fa-star
+                    お気に入り 1
+                %ul.optional
+                  %li.optionalBtn
+                    %a{:href => "#"}
+                      %i.fa.fa-flag
+                      不適切な商品の通報   
+          .commentBox
+            %ul.commentContents
+              %form.form
+                %textarea.commentBody 
+                %p.noticeMsg
+                  相手のことを考え丁寧なコメントを心がけましょう。
+                  %br
+                  不快な言葉遣いなどは利用制限や退会処分となることがあります。
+                %br  
+                %button.commentBtn{name: "button", type: "submit"}
+                  %i.fa.fa-comment
+                  コメントする
+        %ul.links
+          %li.prev
+            = link_to root_path do 
+              %i.fa.fa-angle-left
+              %span
+                前の商品
+          %li.next
+            = link_to root_path do 
+              %span
+                後ろの商品
+              %i.fa.fa-angle-right
+
+
+
+
+
+
+
+
+                  
