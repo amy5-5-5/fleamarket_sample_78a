@@ -1,25 +1,25 @@
-body {
+body2 {
   font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", sans-serif;
 
-  .breadCrumbs {
+  .breadCrumbs2 {
     width: 100%;
     border-top: 1px solid #eee;
     box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
     position: relative;
     padding: 0 60px;
 
-    ul {
+    .nav2 {
       padding: 17px 0 16px;
       width: 100%;
       max-width: 1040px;
       font-size: 14px;
       margin: 0 auto;
 
-      li {
+      .navlist2 {
         padding: 0 10px 0 0;
         float: left;
 
-        a {
+        .navContent2 {
           text-decoration: none;
           color: #333;
         }
@@ -29,61 +29,61 @@ body {
 
   }
 
-  .main {
+  .main2 {
     background: #f8f8f8;
 
-    .showMain {
+    .showMain2 {
       padding: 40px;
       margin: 0 auto;
 
-      .contentRight {
+      .contentRight2 {
         width: 700px;
         margin: 0 auto;
 
-        .topContent {
+        .topContent2 {
           margin: 0;
           padding: 0;
 
-          .itemBox {
+          .itemBox2 {
             background-color: #fff;
             padding: 24px 40px 40px;
 
-            .itemBox__name {
+            .itemBox__name2 {
               text-align: center;
               font-weight: bold;
               font-size: 24px;
             }
 
-            .itemBox__body {
+            .itemBox__body2 {
               margin: 16px 0 0;
 
-              .item1 {
+              .iteminfo1_2 {
                 display: flex;
                 position: relative;
 
-                .itemList1 {
+                .itemList1_2 {
                   display: flex;
                   flex-direction: column;
                   width: 560px;
                   align-items: center;
                   margin: 0 auto;
 
-                  .img1 {
+                  .img1_2 {
                     object-fit: cover;
                     height: 346px;
                     width: 100%;
                     vertical-align: bottom;
 
                   }
-                  .item2 {
+                  .iteminfo2_2 {
                     display: flex;
                     justify-content: center;
                     margin-top: 10px;
 
-                    .itemList2 {
+                    .itemList2_2 {
                        margin: 0 10px 0 0;
 
-                      .img2 {
+                      .img2_2 {
                         object-fit: cover;
                         height: 87px;
                       }
@@ -92,37 +92,47 @@ body {
                 }
               }
             }
-            .itemBox__price {
+            .itemBox__price2 {
               margin: 24px 0 24px;
-              text-align: center;
               display: flex;
               flex-direction: column;
               
-              .price {
+              .price2 {
                 font-size: 46px;
                 font-weight: bold;
                 margin: 0 10px 0 0;
+                text-align: center;
+
               }
 
-              .itemBox__price-detail {
+              .itemBox__price-detail2 {
                 font-size: 16px;
+                text-align: center;
+
+                .tax2 {
+                  text-align: center;
+                }
+                .shipping2 {
+                  text-align: center;
+                }
               }
 
-              .itemDetail {
+              .itemDetail2 {
                 line-height: 1.5;
                 font-size: 18px;
                 margin-bottom: 30px;
+                padding-top: 30px;
               }
 
-              .table {
+              .table2 {
 
-                table {
+                .details2 {
                   width: 100%;
                   height: 375px;
                   border-collapse: collapse;
                   border: 1px solid #f8f8f8;
 
-                  tbody {
+                  .tbody2 {
                     display: table-row-group;
                     vertical-align: middle;
                     border-color: inherit;
@@ -240,8 +250,9 @@ body {
           } 
         }
         .links {
+          display: flex;
+          justify-content: space-between;
           .prev {
-            float: left;
             a {
               text-decoration: none;
               color: #3CCACE;
@@ -256,7 +267,6 @@ body {
           }
 
           .next {
-            float: right;
             
             a {
               text-decoration: none;
@@ -270,7 +280,7 @@ body {
         }
         .relatedItems {
 
-          a {
+          .more {
             display: block;
             margin: 24px 0 8px;
             color: #3CCACE;
@@ -279,6 +289,15 @@ body {
             font-size: 22px;
             position: relative;
           }
+          
+          .productLists {
+
+            .productList {
+
+            }
+
+          }
+          
         }
       }
     }
