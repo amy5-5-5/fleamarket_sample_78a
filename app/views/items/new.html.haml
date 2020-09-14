@@ -1,67 +1,66 @@
-.ItemNewContent
-  .LogoWrapper
+.ItemNewContent4
+  .LogoWrapper4
     = link_to '#' do
-      = image_tag 'logo.png', class: 'LogoWrapper__logo'
-  = form_with model: @item, class: "ItemForm" do |f|
-    .ItemForm__image.borderbottom
-      .labelArea
-        %p.label 出品画像
-        %span.required 必須
-      %span.description 最大10枚までアップロードできます
-      = f.fields_for :images do |i|
-        = i.file_field :src, class: "itemInput imageInput"
-    .ItemForm__item.borderbottom
-      .labelArea
-        %p.label 商品名
-        %span.required 必須
-      = f.text_field :name, class: "itemInput lineInput"
-      .labelArea
-        %p.label 商品の説明
-        %span.required 必須
-      = f.text_area :text, rows: "7", class: "itemInput multipleLines"
-    .ItemForm__itemDetails.borderbottom
-      %p.headline 商品の詳細
-      .labelArea
-        %p.label カテゴリー
-        %span.required 必須
-      -# とりあえずフロント整えるためにinputタグ設置
-      = f.collection_select :category_id, Category.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput lineInput"}
-      .labelArea
-        %p.label ブランド
-        %span.any 任意
-      -# とりあえずフロント整えるためにinputタグ設置
-      %input.itemInput.lineInput
-      .labelArea
-        %p.label 商品の状態
-        %span.required 必須
-      -# とりあえずフロント整えるためにinputタグ設置
-      = f.collection_select :condition_id, Condition.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput lineInput"}
-    .ItemForm__delivery.borderbottom
-      %p.headline 配送について
-      .labelArea
-        %p.label 配送料の負担
-        %span.required 必須
-      -# とりあえずフロント整えるためにinputタグ設置
-      = f.collection_select :burden_id, Burden.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput lineInput"}
-      .labelArea
-        %p.label 発送元の地域
-        %span.required 必須
-      -# とりあえずフロント整えるためにinputタグ設置
-      = f.collection_select :area_id, Area.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput lineInput"}
-      .labelArea
-        %p.label 発送までの日数
-        %span.required 必須
-      -# とりあえずフロント整えるためにinputタグ設置
-      = f.collection_select :shipping_date_id, ShippingDate.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput lineInput"}
-    .ItemForm__price.borderbottom
-      %p.headline 価格（¥300〜9,999,999）
-      .priceArea
-        .labelArea
-          %p.label 販売価格
-          %span.required 必須
-        .priceArea__input
-          %span.enmark ¥
-          = f.number_field :price, class: "lineInput priceInput"
-    .ItemForm__submit
-      = f.submit '出品する', class: "exhibitionBtn"
+      = image_tag 'logo.png', class: 'LogoWrapper4__logo4'
+  = form_with model: @item, class: "ItemForm4" do |f|
+    .ItemForm4__image4.borderbottom4
+      .labelArea4
+        %p.label4 出品画像
+        %span.required4 必須
+      #imageBox4
+        %span.description4 最大3枚までアップロードできます
+        = f.fields_for :images do |i|
+          :erb
+            <div class="js-file_group4", data-index="<%= i.index %>">
+              <%= i.file_field :src, class: "img-js4" %><br>
+              <span class="js-remove4">削除</span>
+            </div>
+    .ItemForm4__item4.borderbottom4
+      .labelArea4
+        %p.label4 商品名
+        %span.required4 必須
+      = f.text_field :name, class: "itemInput4 lineInput4 input4"
+      .labelArea4
+        %p.label4 商品の説明
+        %span.required4 必須
+      = f.text_area :text, rows: "7", class: "itemInput4 textarea4"
+    .ItemForm4__itemDetails4.borderbottom4
+      %p.headline4 商品の詳細
+      .labelArea4
+        %p.label4 カテゴリー
+        %span.required4 必須
+      = f.collection_select :category_id, Category.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput4 lineInput4 select4"}
+      .labelArea4
+        %p.label4 ブランド
+        %span.any4 任意
+      = f.text_field :brand, class: "itemInput4 lineInput4 input4"
+      .labelArea4
+        %p.label4 商品の状態
+        %span.required4 必須
+      = f.collection_select :condition_id, Condition.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput4 lineInput4 select4"}
+    .ItemForm4__delivery4.borderbottom4
+      %p.headline4 配送について
+      .labelArea4
+        %p.label4 配送料の負担
+        %span.required4 必須
+      = f.collection_select :burden_id, Burden.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput4 lineInput4 select4"}
+      .labelArea4
+        %p.label4 発送元の地域
+        %span.required4 必須
+      = f.collection_select :area_id, Area.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput4 lineInput4 select4"}
+      .labelArea4
+        %p.label4 発送までの日数
+        %span.required4 必須
+      = f.collection_select :shipping_date_id, ShippingDate.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput4 lineInput4 select4"}
+    .ItemForm4__price4.borderbottom4
+      %p.headline4 価格（¥300〜9,999,999）
+      .priceArea4
+        .labelArea4
+          %p.label4 販売価格
+          %span.required4 必須
+        .priceArea4__input4
+          %span.enmark4 ¥
+          = f.number_field :price, class: "lineInput4 priceInput4 input4"
+    .ItemForm4__submit4
+      = f.submit '出品する', class: "exhibitionBtn4"
 

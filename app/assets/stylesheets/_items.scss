@@ -2,30 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.ItemNewContent {
+.ItemNewContent4 {
   width: 100vw;
   height: 100%;
   background-color: #f8f8f8;
-  .LogoWrapper {
+  .LogoWrapper4 {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 128px;
-    &__logo {
+    &__logo4 {
       height: 49px;
       width: 185px;
       display: inline-block;
     }
   }
-  .ItemForm {
+  .ItemForm4 {
     margin: 0 auto;
     background-color: #fff;
     height: 2000px;
     width: 700px;
-    .labelArea {
+    .labelArea4 {
       display: flex;
-      .required {
+      .required4 {
         font-size: 12px;
         height: 20px;
         font-weight: bold;
@@ -35,7 +35,7 @@
         padding: 0 4px;
         border-radius: 2px;
       }
-      .any {
+      .any4 {
         font-size: 12px;
         height: 20px;
         font-weight: bold;
@@ -46,52 +46,55 @@
         border-radius: 2px;
       }
     }
-    input,textarea,select {
+    .input4,.textarea4,.select4 {
       border: 1px solid #ccc;
       border-radius: 4px;
       margin-bottom: 10px;
     }
-    .borderbottom {
+    .borderbottom4 {
       border-bottom: 1px solid #efefef;
       padding: 40px;
     }
-    .headline {
+    .headline4 {
       color: gray;
       margin-bottom: 10px;
       font-size: 14px;
       font-weight: bold;
     }
-    .priceArea {
+    .itemInput4 {
+      width: 83%;
+      padding: 0 56px 0 16px;
+    }
+    .select4 {
+      width: 95%;
+    }
+    .priceArea4 {
       display: flex;
       justify-content: space-between;
-      &__input {
-        .enmark {
+      &__input4 {
+        .enmark4 {
           font-size: 16px;
           height: 20px;
           margin: 10px;
         }
-        .priceInput {
+        .priceInput4 {
           width: 80%;
         }
       }
     }
-    .itemInput {
-      width: 85%;
-      padding: 0 56px 0 16px;
-    }
-    .label {
+    .label4 {
       font-size: 14px;
       font-weight: 600;
       margin: 10px 0;
     }
-    .lineInput {
+    .lineInput4 {
       height: 48px;
     }
-    &__submit {
+    &__submit4 {
       width: 70%;
       margin: 0 auto;
       padding: 40px;
-      .exhibitionBtn {
+      .exhibitionBtn4 {
         display: inline-block;
         border: none;
         color: white;
@@ -104,5 +107,7 @@
       }
     }
   }
-  
+  .js-remove4 {
+    cursor: pointer;
+  }
 }
