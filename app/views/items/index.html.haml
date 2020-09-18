@@ -39,22 +39,22 @@
       .content__btn1
         .aBtn1
           = link_to root_path,class: "linkIcon aBtn" do
-            = image_tag "/assets/app-store.svg", class: "image", width:"180px"
+            = image_tag "/assets/app-store.svg", class: "aBtn", width:"180px"
         .gBtn1
           = link_to root_path,class: "linkIcon gBtn" do
-            = image_tag "/assets/google-play.svg", class: "image", width:"180px"
+            = image_tag "/assets/google-play.svg", class: "gBtn", width:"180px"
   .main1__topIntroduction1
     .subtitle1
       FURIMAが選ばれる3つの理由
-      .after
+      .after1
     .lists1
-      .list
+      .list1
         .list__list__pict
           .number
             1
           = image_tag src="pict-reason-01.jpg", width:"217.8px", height:"217.8px"
         .list__text
-          %span 3分 
+          %span.time 3分 
           ですぐに出品
           .list__description
             スマホで入力するだけで簡単に出品できる！
@@ -64,7 +64,7 @@
             2
           = image_tag src="pict-reason-02.jpg", width:"217.8px", height:"217.8px"
         .list__text
-          %span シンプル 
+          %span.color シンプル 
           で使いやすい
           .list__description
             めんどくさい入力は必要なく、検索も購入もスムーズ！
@@ -75,7 +75,7 @@
           = image_tag src="pict-reason-03.jpg", width:"217.8px", height:"217.8px"
         .list__text
           手数料
-          %span 業界最安
+          %span.kakaku 業界最安
           .list__description
             最大3%でお得に出品&購入！
   .main1__topMiddleDl1
@@ -91,10 +91,10 @@
         .btn1
           .aBtn1
             = link_to root_path,class: "linkIcon aBtn" do
-              = image_tag "/assets/app-store.svg", class: "image", width:"180px"
+              = image_tag "/assets/app-store.svg", class: "aBtn", width:"180px"
           .gBtn1
             = link_to root_path,class: "linkIcon gBtn" do
-              = image_tag "/assets/google-play.svg", class: "image", width:"180px"
+              = image_tag "/assets/google-play.svg", class: "gBtn", width:"180px"
   .main1__topKeyFeatures1
     .head1
       FURIMAの特徴
@@ -296,10 +296,10 @@
     .inner__icon1
       .aBtn1
         = link_to  root_path,class: "linkIcon aBtn" do
-          = image_tag "/assets/app-store.svg", class: "image", width:"180px"
+          = image_tag "/assets/app-store.svg", class: "aBtn", width:"180px"
       .gBtn1
         = link_to root_path,class: "linkIcon gBtn" do
-          = image_tag "/assets/google-play.svg", class: "image", width:"180px"
+          = image_tag "/assets/google-play.svg", class: "gBtn", width:"180px"
 .footer1
   %ul.contents
     .content
@@ -341,7 +341,7 @@
           %li
             = link_to root_path do
               お知らせ
-  .footer__logo
+  .footer__logo1
     = link_to root_path,class: "kuro" do
       = image_tag "/assets/kuro.png", class: "image"
     .p
