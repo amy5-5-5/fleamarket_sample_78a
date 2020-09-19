@@ -64,6 +64,10 @@ group :production do
   gem 'unicorn'
 end
 
+
+gem 'haml-rails'
+gem 'font-awesome-sass'
 gem 'carrierwave'
 gem 'fog-aws'
 gem 'ancestry'
+
