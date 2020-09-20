@@ -69,3 +69,5 @@ gem 'fog-aws'
 gem 'ancestry'
 
 gem 'devise'
+
+gem 'haml-rails'

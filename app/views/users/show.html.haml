@@ -1,151 +1,153 @@
-.mypage3
-  /mypage-header3
-    .mypage-header-top3
+.mypage
+  -# .mypage-header
+  -#   .mypage-header-top
       .mypage-header-top-image3
       .mypage-header-top-input3
         何かお探しですか？
-    .mypage-header-nav-box3
-      .ul.mypage-header-nav-root.list3
-        .li カテゴリーから探す
-        .li ブランドから探す
-      .mypage-header-menu-link3
-        .li いいね！一覧
-        .li お知らせ
-        .li やることリスト
-        .li マイページ
-  .mypage-body3
+    -# /.mypage-header-nav-box3
+    -#   /.ul.mypage-header-nav-root.list3
+    -#     /.li カテゴリーから探す
+    -#     /.li ブランドから探す
+    -#   /.mypage-header-menu-link3
+    -#     /.li いいね！一覧
+    -#     /.li お知らせ
+    -#     /.li やることリスト
+    -#     /.li マイページ
+  .mypage-body
     .mypage-side-bar3   
       %nav.mypage-side-bar__nav3
         %ul.mypage-side-bar__list3
           %li
-            = link_to mypage_path, class: 'mypage-side-bar__list3' do
+            = link_to "#", class: 'mypage-side-bar__list3' do
               マイページ
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               お知らせ
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               やることリスト
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               いいね！一覧
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               出品する
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               下書き一覧
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               出品した商品 - 出品中
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               出品した商品 - 取引中
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               出品した商品 - 売却済み
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               購入した商品 - 取引中
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               購入した商品 - 過去の取引
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               ニュース一覧
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               評価一覧
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               ガイド
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               お問い合わせ
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
         %h3.mypage-side-bar__nav-head
           フリペイ
         %ul.mypage-side-bar__list
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               売上・振込申請
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               ポイント
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
         %h3.mypage-side-bar__nav-head
           設定
         %ul.mypage-side-bar__list
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               プロフィール
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               発送元・お届け先住所変更
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               支払い方法
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               メール/パスワード
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               本人情報
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               電話番号の確認
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
           %li
             = link_to '#', class: 'mypage-side-bar__list3' do
               ログアウト
-              = icon 'fas', 'chevron-right'
+              %icon.fas.chevron-right
     .mypage-main-content3
       .mypage-main-content__user-icon
-        /imageを入れたい
-        =link to edit_users_path do 
-        .ul.mypage-performance-number3
-          .li 評価0
-          .li 出品数0
-      .ul.mypage-main-content__item-information
-        .li お知らせ
-        .li やることリスト
+        -# /imageを入れたい
+        =link_to "#" do 
+          %p imageをいれる
+        %ul.mypage-performance-number3
+          %li 評価0
+          %li 出品数0
+      %ul.mypage-main-content__item-information
+        %li お知らせ
+        %li やることリスト
       .mypage-main-content__go-item-list
         一覧を見る
       .mypage-main-content__purchase-item
-        .ul 購入した商品
-          .li 取引中
-          .li 過去の取引
+        %ul 
+          %p 購入した商品
+          %li 取引中
+          %li 過去の取引
   
-  /mypage-footer3
+  -# mypage-footer3
     mypage-footer-head
-      .ul. フリマについて
-        li. 会社概要（運営会社）
+      .ul フリマについて
+        li 会社概要（運営会社）
         li採用情報
         li プレスリリース
         li 公式ブログ
         liフリマロゴ利用ガイドライン
-        /icon %twitter
-        /icon facebook
+        -# /icon %twitter
+        -# /icon facebook
       .ul ヘルプと各種情報
         li フリマガイド
         li らくらくフリマ便
@@ -170,5 +172,5 @@
 
 
     .mypage-footer-bottom
-      /mypage-footer-bottom-image
-      /mypage-footer-bottom-copyright
+      -# /mypage-footer-bottom-image
+      -# /mypage-footer-bottom-copyright

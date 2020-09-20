@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
 
-  before_action :authenticate_user!, only: [:mypage]
+  # before_action :authenticate_user!, only: [:mypage]
 
   def show
-    @nickname = current_user.nickname
-    @user = User.where(user_id: current_user.id)
+    # @nickname = current_user.nickname
+    # @user = User.where(user_id: current_user.id)
   end
 
   def edit
