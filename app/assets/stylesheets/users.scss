@@ -17,6 +17,7 @@
   margin:40px 210px 0px;
   padding:0px 0px 40px;
   display:flex;
+  justify-content: space-between;
 }
 
 .mypage-footer3{
@@ -29,11 +30,12 @@
 } 
 
 .mypage-side-bar__list3{
+  width:280px;
+  background-color: #ffffff;
   list-style: none;
   height:48px;
-  border-style:solid;
-  border-width:0px;
   padding: 16px;
+  display: flex;
 }
 
 .mypage-side-bar__nav-head3{
@@ -42,29 +44,47 @@
 }
 
 .mypage-main-content3{
-  background-color: #3CCACE;
   height:1189px;
   width:700px;
 }
 
 .mypage-main-content__user-icon3{
+
   height:200px;
+  text-align: center;
+  padding:20px;
+  background-color: #3CCACE;
+  vertical-align: center;
 }
 
-.mypage-performance-number3{
-
+.mypage-main-content__active3{
+  display: flex;
+  background-color: #ffffff;
 }
 
 .mypage-main-content__item-information3{
 
 }
 
+.mypage-main-content_item-information-block3{
+  padding:16px;
+}
+
+.mypage-main-content_item-information-block-image3{
+  width:48px;
+}
+
+.mypage-main-content_item-information-block-text3{
+  width:560px;
+}
+
 .mypage-main-content__go-item-list3{
   height:28px;
   padding:16px;
-
+  background-color: #f5f5f5;
+  text-align: center;
 }
 
-.mypage-main-content__purchase-item3{
-  
+.mypage-main-content__purchase-item-tab3{
+  display: flex;
 }
