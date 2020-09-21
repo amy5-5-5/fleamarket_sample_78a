@@ -4,7 +4,6 @@
 
 .ItemNewContent4 {
   width: 100vw;
-  height: 100%;
   background-color: #f8f8f8;
   .LogoWrapper4 {
     display: flex;
@@ -44,6 +43,63 @@
         color: white;
         padding: 0 3px;
         border-radius: 2px;
+      }
+    }
+    #previews {
+      display: flex;
+      margin: 10px auto;
+      width: 400px;
+      .ImgPrevBox4 {
+        margin: 0 auto;
+        .prevImg4 {
+          border-radius: 3px;
+        }
+      }
+    }
+    #imageBox4 {
+      width: 100%;
+      height: 140px;
+      display: flex;
+      .js-file_group4 {
+        width: 100%;
+        text-align: center;
+        padding: 35px;
+        border: 1px dashed #ccc;
+        background-color: rgb(245, 245, 245);
+        .uploadBtn4 {
+          .fa-camera {
+            cursor: pointer;
+            font-size: 50px;
+            margin-bottom: 15px;
+          }
+          .imgMsg4 {
+            color:  gray;
+            font-size: 12px;
+          }
+          .img-js4 {
+            width: 100%;
+          }
+        }
+        .hidden4 {
+          display: none;
+        }
+      }
+    }
+    .BtnWrap4 {
+      text-align: center;
+      .js-edit4 {
+        cursor: pointer;
+        color: white;
+        background-color: skyblue;
+        padding: 5px;
+        border-radius: 3px;
+      }
+      .js-remove4 {
+        cursor: pointer;
+        color: white;
+        background-color: tomato;
+        padding: 5px;
+        border-radius: 3px;
       }
     }
     .input4,.textarea4,.select4 {
@@ -106,8 +162,16 @@
         cursor: pointer;
       }
     }
+    .imgalert {
+      color: red;
+    }
   }
-  .js-remove4 {
-    cursor: pointer;
+  .ErrorMsgBox4 {
+    display: contents;
+    color: red;
+    .alert {
+      font-size: 12px;
+      padding: 30px;
+    }
   }
 }

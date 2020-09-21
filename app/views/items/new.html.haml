@@ -2,18 +2,36 @@
   .LogoWrapper4
     = link_to '#' do
       = image_tag 'logo.png', class: 'LogoWrapper4__logo4'
-  = form_with model: @item, class: "ItemForm4" do |f|
+  
+  = form_with model: @item, class: "ItemForm4", local: true do |f|
+    .ErrorMsgBox4
+      - if @item.errors.any?
+        .alert
+          %ul
+            - @item.errors.full_messages.each do |message|
+              %li= message
     .ItemForm4__image4.borderbottom4
       .labelArea4
         %p.label4 出品画像
         %span.required4 必須
+      %p.description4 最大3枚までアップロードできます
+      #previews
+        - if @item.persisted?
+          - @item.images.each_with_index do |image, i|
+            .ImgPrevBox4
+              = image_tag image.src.url, class: "prevImg4", data: { index: i }, width: "100", height: '100'
+              .BtnWrap4
+                %span.js-remove4 削除
+                %span.js-edit4 変更
       #imageBox4
-        %span.description4 最大3枚までアップロードできます
         = f.fields_for :images do |i|
           :erb
             <div class="js-file_group4", data-index="<%= i.index %>">
-              <%= i.file_field :src, class: "img-js4" %><br>
-              <span class="js-remove4">削除</span>
+              <label class="uploadBtn4", data-index="<%= i.index %>">
+                <i class="fas fa-camera"></i>
+                <p class="imgMsg4">クリックして画像をアップロード</p>
+                <%= i.file_field :src, class: "img-js4 hidden4" %><br>
+              </label>
             </div>
     .ItemForm4__item4.borderbottom4
       .labelArea4
