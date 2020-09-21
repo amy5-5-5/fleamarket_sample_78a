@@ -30,17 +30,23 @@
 } 
 
 .mypage-side-bar__list3{
-  width:280px;
   background-color: #ffffff;
   list-style: none;
-  height:48px;
+  height:16px;
   padding: 16px;
+  display: block;
   display: flex;
+  justify-content: space-between;
+  border-style: solid;
+  border-width: 0px;
+  text-decoration: none;
 }
 
 .mypage-side-bar__nav-head3{
+  font-size: 16px;
   height:16px;
   margin:40px 0px 0px;
+  font-weight: bold;
 }
 
 .mypage-main-content3{
@@ -62,7 +68,7 @@
   background-color: #ffffff;
 }
 
-.mypage-main-content__item-information3{
+.mypage-main-content__item-information3{;
 
 }
 

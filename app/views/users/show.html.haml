@@ -17,10 +17,11 @@
     .mypage-side-bar3   
       %nav.mypage-side-bar__nav3
         %ul.mypage-side-bar__list1_3
-          = link_to "#" do
-            %li.mypage-side-bar__list3 
-              マイページ
-              %li.fa.fa-chevron-right
+          = link_to "#" , class:"list-link" do
+            %li.mypage-side-bar__list3
+              %p マイページ
+              .mypage-side-bar__list-icon
+                =icon 'fas','chevron-right'
           
           = link_to '#' do
             %li.mypage-side-bar__list3 
@@ -162,7 +163,7 @@
                   =image_tag src="/assets/images/logo/logo.png", size: "48x48"
               %li.mypage-main-content_item-information-block__text3
                 〈まずはエントリー〉今だけ最大P1,000→最大P2,000に増量！フリペイスマート払いでもらえる
-              %li.fa.fa-chevron-right
+              =icon 'fas','chevron-right'
 
             =link_to '#' do
               %li.mypage-main-content_item-information-block__image3
