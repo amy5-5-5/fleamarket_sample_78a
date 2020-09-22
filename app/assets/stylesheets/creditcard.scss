@@ -5,34 +5,67 @@
 }
 
 .credit-card-list-title3{
-  height:99px;
+  height:34px;
+  padding:32px 16px;
   text-align: center;
+  font-size:24px;
+  font-style:bold ;
+  background-color: #FFFFFF;
 }
 
 .credit-card-list-registration3{
-  width:375x;
-  height:133px;
+  background-color: #FFFFFF;
+  width:375px;
+  height:68px;
   font-size:15px;
   text-align: center;
+  padding:32px 0px;
+  margin-left: auto;
+  margin-right:auto;
 }
 
-.credit-card-list-registration-btn{
+.credit-card-list-registration-btn3{
   margin:32px 0px 0px;
   font-size:14px;
   color:#0095EE
 }
 
 .credit-card-select-btn3{
+  background-color: #FFFFFF;
   height:48px;
   width:375px;
-  color:#888888;
-  background-color:#ccc;
   padding:32px 0px 48px;
-  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+  p{
+    font-size:17px;
+    color:#888888;
+    background-color:#ccc;
+    font-style:bold;
+    text-align: center;
+    padding:0px 24px;
+    height:48px;
+    line-height: 48px;
+  }
 }
 
 .credit-card-select-text3{
+  width:375px;
   padding:0px 0px 56px;
   font-size:14px;
-  height:72.38px;
+  height:16.38px;
+  margin-left:auto;
+  margin-right:auto;
+  background-color: #FFFFFF;
+  display: flex;
+
+  p{
+    color:#0095EE;
+    margin-left: 230px;
+  }
+}
+
+.credit-card-select-text-link{
+  color:#0095EE;
+  margin-left:auto;
 }

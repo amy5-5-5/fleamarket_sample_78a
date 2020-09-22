@@ -1,15 +1,18 @@
 .log-out {
-  width:700px;
-  height:179px;
+  width:572px;
+  height:50px;
+  background-color: #FFFFFF;
+  text-align: center;
   padding:64px;
-
+  text-decoration: none;
 }
 
-.log-out-btn {
+.log-out-btn{
   width:320px;
-  height:50px;
   color:#FFFFFF;
   background-color:#EA352D;
   font-size: 14px;
-  text-align: center;
+  line-height:50px;
+  margin-left: auto;
+  margin-right: auto;
 }
