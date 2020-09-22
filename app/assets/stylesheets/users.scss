@@ -54,14 +54,19 @@
   width:700px;
 }
 
-.mypage-main-content__user-icon3{
-  height:160px;
-  text-align: center;
-  padding:20px;
+.mypage-main-content__user3{
   background-image:url(/assets/logo/mypage-background.jpeg);
   background-size:cover;
   background-position:center;
+  height:160px;
+  text-align: center;
+  padding:20px;
 }
+
+.mypage-main-content__user-icon3{
+  text-decoration: none;
+}
+
 
 .mypage-main-content__active3{
   display: flex;
@@ -69,11 +74,24 @@
 }
 
 .mypage-main-content__item-information3{;
+  p{
+    font-size:16px;
+    font-style:bold;
+    height:72px;
+    text-align: center;
+    line-height:72px;
+  }
 
 }
 
 .mypage-main-content_item-information-block3{
+  display: flex;
   padding:16px;
+  text-decoration: none;
+}
+
+.mypage-main-content_item-information-box3{
+  display: flex;
 }
 
 .mypage-main-content_item-information-block-image3{
@@ -82,6 +100,21 @@
 
 .mypage-main-content_item-information-block-text3{
   width:560px;
+}
+
+.mypage-main-content__todo3{
+  p{
+    font-size:16px;
+    font-style:bold;
+    height:72px;
+    text-align: center;
+    line-height:72px;
+  }
+}
+
+.mypage-main-content__todo-block3{
+  text-decoration: none;
+  display: flex;
 }
 
 .mypage-main-content__go-item-list3{
@@ -122,6 +155,7 @@
 }
 
 .mypage-main-content__purchase-item-detail3{
+  background-color: #FFFFFF;
   height:236px;
   padding:100px 0px 60px;
   color:#CCCCCC;
