@@ -10,7 +10,8 @@ class ItemsController < ApplicationController
    if @item.save
     redirect_to new_item_path
    else
-    render new_item_path
+    @item.images.new
+    render :new
    end
   end
 

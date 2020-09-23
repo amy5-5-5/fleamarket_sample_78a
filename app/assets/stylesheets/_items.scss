@@ -4,6 +4,7 @@
 
 .ItemNewContent4 {
   width: 100vw;
+  height: 100%;
   background-color: #f8f8f8;
   .LogoWrapper4 {
     display: flex;
@@ -20,7 +21,7 @@
   .ItemForm4 {
     margin: 0 auto;
     background-color: #fff;
-    height: 2000px;
+    height: 100%;
     width: 700px;
     .labelArea4 {
       display: flex;
@@ -165,13 +166,10 @@
     .imgalert {
       color: red;
     }
-  }
-  .ErrorMsgBox4 {
-    display: contents;
-    color: red;
-    .alert {
-      font-size: 12px;
-      padding: 30px;
+    .errorMessages4 {
+      color: red;
+      font-size: 14px;
+      padding: 20px;
     }
   }
 }

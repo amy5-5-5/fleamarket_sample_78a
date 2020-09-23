@@ -2,14 +2,11 @@
   .LogoWrapper4
     = link_to '#' do
       = image_tag 'logo.png', class: 'LogoWrapper4__logo4'
-  
   = form_with model: @item, class: "ItemForm4", local: true do |f|
-    .ErrorMsgBox4
-      - if @item.errors.any?
-        .alert
-          %ul
-            - @item.errors.full_messages.each do |message|
-              %li= message
+    - if @item.errors.any?
+      %ul.errorMessages4
+        - @item.errors.full_messages.each do |msg|
+          %li= msg
     .ItemForm4__image4.borderbottom4
       .labelArea4
         %p.label4 出品画像
