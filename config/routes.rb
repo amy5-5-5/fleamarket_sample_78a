@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  root 'items#show'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root 'items#index'
+  resources :items, except: [:index, :show]
+  get '/items/show', to: 'items#show'
 end
