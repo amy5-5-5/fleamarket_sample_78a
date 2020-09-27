@@ -1,6 +1,14 @@
+// Place all the styles related to the items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
 * {
   box-sizing: border-box;
 }
+
+
+
+// ヘッダー
 .pcHeader1{
   padding: 0 60px;
   &__headerInner1{
@@ -83,6 +91,181 @@
     }
   }
 }
+
+// 商品出品ページ
+.ItemNewContent4 {
+  width: 100vw;
+  height: 100%;
+  background-color: #f8f8f8;
+  .LogoWrapper4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 128px;
+    &__logo4 {
+      height: 49px;
+      width: 185px;
+      display: inline-block;
+    }
+  }
+  .ItemForm4 {
+    margin: 0 auto;
+    background-color: #fff;
+    height: 100%;
+    width: 700px;
+    .labelArea4 {
+      display: flex;
+      .required4 {
+        font-size: 12px;
+        height: 20px;
+        font-weight: bold;
+        background-color: red;
+        margin: 10px 15px;
+        color: white;
+        padding: 0 4px;
+        border-radius: 2px;
+      }
+      .any4 {
+        font-size: 12px;
+        height: 20px;
+        font-weight: bold;
+        background-color: #ccc;
+        margin: 10px 15px;
+        color: white;
+        padding: 0 3px;
+        border-radius: 2px;
+      }
+    }
+    #previews {
+      display: flex;
+      margin: 10px auto;
+      width: 400px;
+      .ImgPrevBox4 {
+        margin: 0 auto;
+        .prevImg4 {
+          border-radius: 3px;
+        }
+      }
+    }
+    #imageBox4 {
+      width: 100%;
+      height: 140px;
+      display: flex;
+      .js-file_group4 {
+        width: 100%;
+        text-align: center;
+        padding: 35px;
+        border: 1px dashed #ccc;
+        background-color: rgb(245, 245, 245);
+        .uploadBtn4 {
+          .fa-camera {
+            cursor: pointer;
+            font-size: 50px;
+            margin-bottom: 15px;
+          }
+          .imgMsg4 {
+            color:  gray;
+            font-size: 12px;
+          }
+          .img-js4 {
+            width: 100%;
+          }
+        }
+        .hidden4 {
+          display: none;
+        }
+      }
+    }
+    .BtnWrap4 {
+      text-align: center;
+      .js-edit4 {
+        cursor: pointer;
+        color: white;
+        background-color: skyblue;
+        padding: 5px;
+        border-radius: 3px;
+      }
+      .js-remove4 {
+        cursor: pointer;
+        color: white;
+        background-color: tomato;
+        padding: 5px;
+        border-radius: 3px;
+      }
+    }
+    .input4,.textarea4,.select4 {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .borderbottom4 {
+      border-bottom: 1px solid #efefef;
+      padding: 40px;
+    }
+    .headline4 {
+      color: gray;
+      margin-bottom: 10px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .itemInput4 {
+      width: 100%;
+      padding: 0 56px 0 16px;
+    }
+    .select4 {
+      width: 100%;
+    }
+    .priceArea4 {
+      display: flex;
+      justify-content: space-between;
+      &__input4 {
+        .enmark4 {
+          font-size: 16px;
+          height: 20px;
+          margin: 10px;
+        }
+        .priceInput4 {
+          width: 80%;
+        }
+      }
+    }
+    .label4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin: 10px 0;
+    }
+    .lineInput4 {
+      height: 48px;
+    }
+    &__submit4 {
+      width: 70%;
+      margin: 0 auto;
+      padding: 40px;
+      .exhibitionBtn4 {
+        display: inline-block;
+        border: none;
+        color: white;
+        font-weight: bold;
+        background-color: rgb(62, 236, 228);
+        width: 100%;
+        height: 50px;
+        margin-top: 30px;
+        cursor: pointer;
+      }
+    }
+    .imgalert {
+      color: red;
+    }
+    .errorMessages4 {
+      color: red;
+      font-size: 14px;
+      padding: 20px;
+    }
+  }
+}
+
+// 詳細ページ
 .navbar2 {
   width: 100%;
   height: 50px;
@@ -465,9 +648,8 @@
       }
     }
 }
-// トップページのビュー 
 
-
+// 商品詳細画面メイン
 .main2 {
   background: #f8f8f8;
   .showMain2 {
@@ -717,6 +899,8 @@
     }     
   }
 }
+
+// フッターの上部分
 .appBanner1{
   background-image: image-url("bg-appBanner-pict.jpg");
   padding: 100px 40px;
@@ -756,6 +940,8 @@
     }
   }
 }
+
+// フッター
 .footer1{
   padding: 60px 0;
   color: #fff;
