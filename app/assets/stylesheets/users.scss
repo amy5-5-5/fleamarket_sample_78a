@@ -55,7 +55,7 @@
 .mypage-side-bar__nav-head3{
   font-size: 16px;
   height:16px;
-  margin:40px 0px 0px;
+  margin:40px 0px 8px;
   font-weight: bold;
 }
 
@@ -75,6 +75,10 @@
 
 .mypage-main-content__user-icon3{
   text-decoration: none;
+
+  p{
+    margin-top:8px;
+  }
   &:link{
     color:#333333
   }
@@ -162,6 +166,7 @@
   border-bottom-width:1px;
   border-bottom-color:#F5F5F5;
   justify-content: space-between;
+  padding:16px;
   &:link{
     color:#333333
   }
