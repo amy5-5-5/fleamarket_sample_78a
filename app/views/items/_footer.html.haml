@@ -7,10 +7,10 @@
     .inner__icon1
       .aBtn1
         = link_to  root_path,class: "linkIcon aBtn" do
-          = image_tag "/assets/app-store.svg", class: "aBtn", width:"180px"
+          = image_tag asset_path("app-store.svg"), class: "aBtn", width:"180px"
       .gBtn1
         = link_to root_path,class: "linkIcon gBtn" do
-          = image_tag "/assets/google-play.svg", class: "gBtn", width:"180px"
+          = image_tag asset_path("google-play.svg"), class: "gBtn", width:"180px"
 .footer1
   %ul.contents
     .content
@@ -54,7 +54,7 @@
               お知らせ
   .footer__logo1
     = link_to root_path,class: "kuro" do
-      = image_tag "/assets/kuro.png", class: "image"
+      = image_tag asset_path("kuro.png"), class: "image"
     .p
       © FURIMA
 %li
