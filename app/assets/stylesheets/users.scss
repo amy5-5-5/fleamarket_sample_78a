@@ -113,7 +113,6 @@
     display: none;
   }
   .mypage-main-content.show {
-    margin-top: 50px;
     display: block;
   }
 }
@@ -147,8 +146,13 @@
 }
 
 .mypage-main-content_item-information-block-text3{
-  width:560px;
+  width:452px;
   margin:0px 40px 0px 68px;
+  
+}
+
+.mypage-main-content__todo-block__link3{
+
 }
 
 .mypage-main-content__todo-block3{
@@ -184,11 +188,20 @@
   
 }
 
+.mypage-purchase-head{
+  padding:16px;
+  height:36px;
+  background:#FAFAFA;
+  font-style:bold;
+  font-size:16px;
+  line-height: 36px;
+
+}
+
 .mypage-purchase-tab-area{
   height:72px;
   font-size:16px;
-  padding:0px 16px;
-  background-color:#FAFAFA;
+  background-color:#F5F5F5;
   line-height:72px;
   display:flex;
   text-align: center;
