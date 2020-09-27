@@ -6,6 +6,92 @@
   box-sizing: border-box;
 }
 
+
+
+// ヘッダー
+.pcHeader1{
+  padding: 0 60px;
+  &__headerInner1{
+    max-width:1040px;
+    width: 100%;
+    min-height: 82px;
+    margin:0px;
+    padding: 15px 0 0;
+  }
+  &__mainHeader1{
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &__FURIMA_icon1{
+    margin-right:50px;
+    border-radius:4px;
+    display: block;
+    .serchbtn{
+        width:100px;
+        display: block;
+      }
+      .image{
+        width: 160px;
+        vertical-align: bottom;
+        padding-right: 20px;
+      }
+  }
+  &__searchBox1{
+    margin-left: auto;
+    width: 600%;
+    .form{
+      display: flex;
+      margin-bottom: 5px;
+      width: 100%;
+    }
+    .class-name__text{
+      width: 100%;
+      height:36px;
+      padding: 0 0 0 5px;
+    }
+    .fa-search{
+      color: white ;
+      width: 36px;
+      border: 0;
+      cursor: pointer;
+      background-color: #3CCACE;
+      padding: 8px;
+    }
+  } 
+  &__nav1{
+    font-size: 14px;
+    display: flex;
+    margin-bottom: 10px;
+    .listsLeft1{
+      position: relative;
+      display: flex;
+    }
+    .listsLeft__item--first1{
+      text-decoration: none;
+      padding-right:   20px;
+      line-height: 38px;
+    }
+    .listsLeft__item1{
+      display: flex;
+      line-height: 38px;
+    }
+    .listsRight1{
+      margin-left: auto;
+      display: flex;
+    }
+    .listsRight__item--login1{
+      color: #333;
+      line-height: 38px;
+      padding-right: 20px;
+    }
+    .listsRight__item--new1{
+      color: #333;
+      line-height: 38px;
+    }
+  }
+}
+
 // 商品出品ページ
 .ItemNewContent4 {
   width: 100vw;
@@ -178,91 +264,8 @@
     }
   }
 }
-// * {
-//   box-sizing: border-box;
-// }
-.pcHeader1{
-  padding: 0 60px;
-  &__headerInner1{
-    max-width:1040px;
-    width: 100%;
-    min-height: 82px;
-    margin:0px;
-    padding: 15px 0 0;
-  }
-  &__mainHeader1{
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  &__FURIMA_icon1{
-    margin-right:50px;
-    border-radius:4px;
-    display: block;
-    .serchbtn{
-        width:100px;
-        display: block;
-      }
-      .image{
-        width: 160px;
-        vertical-align: bottom;
-        padding-right: 20px;
-      }
-  }
-  &__searchBox1{
-    margin-left: auto;
-    width: 600%;
-    .form{
-      display: flex;
-      margin-bottom: 5px;
-      width: 100%;
-    }
-    .class-name__text{
-      width: 100%;
-      height:36px;
-      padding: 0 0 0 5px;
-    }
-    .fa-search{
-      color: white ;
-      width: 36px;
-      border: 0;
-      cursor: pointer;
-      background-color: #3CCACE;
-      padding: 8px;
-    }
-  } 
-  &__nav1{
-    font-size: 14px;
-    display: flex;
-    margin-bottom: 10px;
-    .listsLeft1{
-      position: relative;
-      display: flex;
-    }
-    .listsLeft__item--first1{
-      text-decoration: none;
-      padding-right:   20px;
-      line-height: 38px;
-    }
-    .listsLeft__item1{
-      display: flex;
-      line-height: 38px;
-    }
-    .listsRight1{
-      margin-left: auto;
-      display: flex;
-    }
-    .listsRight__item--login1{
-      color: #333;
-      line-height: 38px;
-      padding-right: 20px;
-    }
-    .listsRight__item--new1{
-      color: #333;
-      line-height: 38px;
-    }
-  }
-}
+
+// 詳細ページ
 .navbar2 {
   width: 100%;
   height: 50px;
@@ -645,9 +648,8 @@
       }
     }
 }
-// トップページのビュー 
 
-
+// 商品詳細画面メイン
 .main2 {
   background: #f8f8f8;
   .showMain2 {
@@ -897,6 +899,8 @@
     }     
   }
 }
+
+// フッターの上部分
 .appBanner1{
   background-image: image-url("bg-appBanner-pict.jpg");
   padding: 100px 40px;
@@ -936,6 +940,8 @@
     }
   }
 }
+
+// フッター
 .footer1{
   padding: 60px 0;
   color: #fff;
