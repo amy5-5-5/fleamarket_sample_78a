@@ -150,10 +150,14 @@
             = image_tag src="/assets/icon/member_photo_noimage_thumb.png", size: "60x60"
           %p ユーザー名
           %p 評価 0  出品数 0
-      .mypage-main-content__active3
-        .mypage-main-content__item-information3
-          %p お知らせ
-          %ul.mypage-main-content_item-information3
+      .mypage-main-active
+        .mypage-main-tab-area
+          .mypage-main-tab.active
+            %p お知らせ
+          .mypage-main-tab
+            %p やることリスト
+        .mypage-main-content-area
+          .mypage-main-content.show
             =link_to '#',class:"mypage-main-content_item-information-block3" do
               .mypage-main-content_item-information-block__image3
                 %span.image
@@ -190,9 +194,7 @@
               .mypage-main-content_item-information-block__link3
                 =icon 'fas','chevron-right'
 
-        .mypage-main-content__todo3
-          %p やることリスト
-          %ul.mypage-main-content__todo3
+          .mypage-main-content
             =link_to '#',class:"mypage-main-content__todo-block3"do
               .mypage-main-content__todo-block__image3
                 %span.image
@@ -205,16 +207,23 @@
       .mypage-main-content__go-item-list3
         %p 一覧を見る
 
-      .mypage-main-content__purchase-item3
-        .mypage-main-content__purchase-item-tabhead3
-          %p 購入した商品
-        %ul.mypage-main-content__purchase-item-tab3
-          %li 取引中
-          %li 過去の取引
-        .mypage-main-content__purchase-item-detail3
-          %span.image
-            =image_tag src="/assets/logo/logo-icon-grey.png", size: "60x60"
-          %p 取扱中の商品がございません
+      .mypage-purchase-active
+        .mypage-purchase-tab-area
+          .mypage-purchase-tab.active
+            %p 取引中
+          .mypage-purchase-tab
+            %p 過去の取引
+        .mypage-purchase-content-area
+          .mypage-purchase-content.show
+            %span.image
+              =image_tag src="/assets/logo/logo-icon-grey.png", size: "60x60"
+            %p 取扱中の商品がございません
+
+          .mypage-purchase-content
+            %span.image
+              =image_tag src="/assets/logo/logo-icon-grey.png", size: "60x60"
+            %p 過去に取引した商品がありません
+
   
   -#mypage-footer3
     mypage-footer-head

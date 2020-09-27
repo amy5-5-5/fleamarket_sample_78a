@@ -22,7 +22,6 @@
 
 .mypage-footer3{
   height:421px;
-  background-color:black ;
 }
 
 .mypage-side-bar3{
@@ -37,9 +36,20 @@
   display: block;
   display: flex;
   justify-content: space-between;
-  border-style: solid;
-  border-width: 0px;
+  border-bottom-style: solid;
+  border-bottom-width:1px;
+  border-bottom-color:#F5F5F5;
   text-decoration: none;
+  &:link{
+    color:#333333
+  }
+  &:visited{
+    color:#333333
+  }
+  &:hover {
+    background-color: #FAFAFA;
+  }
+
 }
 
 .mypage-side-bar__nav-head3{
@@ -68,30 +78,62 @@
 }
 
 
-.mypage-main-content__active3{
-  display: flex;
-  background-color: #ffffff;
+.mypage-main-active{
+
 }
 
-.mypage-main-content__item-information3{;
-  p{
-    font-size:16px;
-    font-style:bold;
-    height:72px;
-    text-align: center;
-    line-height:72px;
+.mypage-main-tab-area{
+  display:flex;
+  font-size:16px;
+  font-style:bold;
+  height:72px;
+  text-align: center;
+  line-height:72px;
+  .mypage-main-tab{
+    width:350px;
   }
-
+  .mypage-main-tab.active{
+    background-color: #FFFFFF;
+    width:350px;
+    border-top-style:solid;
+    border-top-color:red;
+    border-top-width:3px;
+  }
 }
+
+.mypage-main-content-area {
+  background-color: #FFFFFF;
+  .mypage-main-content {
+    display: none;
+  }
+  .mypage-main-content.show {
+    margin-top: 50px;
+    display: block;
+  }
+}
+
 
 .mypage-main-content_item-information-block3{
   display: flex;
   padding:16px;
   text-decoration: none;
+  border-bottom-style: solid;
+  border-bottom-width:1px;
+  border-bottom-color:#F5F5F5;
+  &:link{
+    color:#333333
+  }
+  &:visited{
+    color:#333333
+  }
+  &:hover {
+    background-color: #FAFAFA;
+  }
 }
 
 .mypage-main-content_item-information-box3{
   display: flex;
+  
 }
 
 .mypage-main-content_item-information-block-image3{
@@ -102,19 +144,21 @@
   width:560px;
 }
 
-.mypage-main-content__todo3{
-  p{
-    font-size:16px;
-    font-style:bold;
-    height:72px;
-    text-align: center;
-    line-height:72px;
-  }
-}
-
 .mypage-main-content__todo-block3{
   text-decoration: none;
   display: flex;
+  border-bottom-style: solid;
+  border-bottom-width:1px;
+  border-bottom-color:#F5F5F5;
+  &:link{
+    color:#333333
+  }
+  &:visited{
+    color:#333333
+  }
+  &:hover {
+    background-color: #FAFAFA;
+  }
 }
 
 .mypage-main-content__go-item-list3{
@@ -132,33 +176,44 @@
   
 }
 
-.mypage-main-content__purchase-item-tabhead3{
+.mypage-purchase-tab-area{
   height:72px;
   font-size:16px;
   padding:0px 16px;
   background-color:#FAFAFA;
   line-height:72px;
-}
-
-
-.mypage-main-content__purchase-item-tab3{
-  display: flex;
-  font-size:16px;
-  font-style:bold;
+  display:flex;
   text-align: center;
-  height:72px;
-
-  li{
-    width: 350px;
-    line-height: 72px;;
+  .mypage-purchase-tab{
+    width:350px;
+  }
+  .mypage-purchase-tab.active{
+    background-color: #FFFFFF;
+    width:350px;
+    border-top-style:solid;
+    border-top-color:red;
+    border-top-width:3px;
   }
 }
 
-.mypage-main-content__purchase-item-detail3{
+
+.mypage-purchase-content-area{
   background-color: #FFFFFF;
-  height:236px;
-  padding:100px 0px 60px;
-  color:#CCCCCC;
-  font-size:16px;
-  text-align:center
+
+  .mypage-purchase-content{
+    display:none;
+    height:236px;
+    padding:100px 0px 60px;
+    color:#CCCCCC;
+    font-size:16px;
+    text-align:center
+  }
+  .mypage-purchase-content.show{
+    display:block;
+    height:236px;
+    padding:100px 0px 60px;
+    color:#CCCCCC;
+    font-size:16px;
+    text-align:center
+  }
 }

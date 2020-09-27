@@ -73,3 +73,5 @@ gem 'devise'
 gem 'haml-rails'
 
 gem 'font-awesome-sass', '~> 5.8.1'
+
+gem 'jquery-rails'
