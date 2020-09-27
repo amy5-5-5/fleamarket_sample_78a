@@ -2,7 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+* {
+  box-sizing: border-box;
+}
 
 // 商品出品ページ
 .ItemNewContent4 {
@@ -122,11 +124,11 @@
       font-weight: bold;
     }
     .itemInput4 {
-      width: 83%;
+      width: 100%;
       padding: 0 56px 0 16px;
     }
     .select4 {
-      width: 95%;
+      width: 100%;
     }
     .priceArea4 {
       display: flex;
@@ -176,9 +178,9 @@
     }
   }
 }
-* {
-  box-sizing: border-box;
-}
+// * {
+//   box-sizing: border-box;
+// }
 .pcHeader1{
   padding: 0 60px;
   &__headerInner1{

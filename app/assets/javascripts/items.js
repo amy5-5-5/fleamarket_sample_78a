@@ -24,14 +24,6 @@ $(document).on('turbolinks:load', ()=> {
     return html;
   }
 
-  // 画像が3枚アップロードされている場合、新たなフォームを追加しない処理
-  $(window).on('load', function(){
-    if ($('.prevImg4').length === 3) {
-      console.log($('.prevImg4').length);
-      $('#imageBox4').hide();
-    }
-  });
-
   // 画像アップロードフォームのname属性およびidに付与するindex番号を動的にするための配列生成
   let fileIndex = [1,2,3,4,5,6,7,8,9,10];
   // 画像数のカウント

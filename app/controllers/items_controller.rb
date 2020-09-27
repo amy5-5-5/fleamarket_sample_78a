@@ -13,13 +13,13 @@ class ItemsController < ApplicationController
 
   def create
     # ログインユーザーのIDを自動保存する処理が必要（ユーザー機能ができてから）
-   @item = Item.new(item_params)
-   if @item.save
-    redirect_to new_item_path
-   else
-    @item.images.new
-    render :new
-   end
+    @item = Item.new(item_params)
+    if @item.save
+      redirect_to new_item_path
+    else
+      @item.images.new
+      render :new
+    end
   end
 
   private
