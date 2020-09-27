@@ -11,7 +11,7 @@
       .labelArea4
         %p.label4 出品画像
         %span.required4 必須
-      %p.description4 最大3枚までアップロードできます
+      %p.description4 複数枚アップロードできます
       #previews
         - if @item.persisted?
           - @item.images.each_with_index do |image, i|
