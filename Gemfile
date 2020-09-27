@@ -64,10 +64,16 @@ group :production do
   gem 'unicorn'
 end
 
-
-gem 'haml-rails'
-gem 'font-awesome-sass'
-gem 'carrierwave'
-gem 'fog-aws'
+gem 'haml-rails', ">= 1.0", '<= 2.0.1'
+gem 'font-awesome-sass', '~> 5.8.1'
 gem 'ancestry'
-
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'active_hash'
+gem 'jquery-rails'
+gem 'rails-i18n'
+gem 'rspec-rails', '~> 4.0.0.beta2'
+gem 'rails-controller-testing'
+gem 'factory_bot_rails'
+gem 'faker'
+gem 'fog-aws'
