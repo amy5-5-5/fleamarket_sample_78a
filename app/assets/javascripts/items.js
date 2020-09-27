@@ -44,9 +44,6 @@ $(document).on('turbolinks:load', ()=> {
     const blobUrl = window.URL.createObjectURL(file);
     if (img = $(`img[data-index="${targetIndex}"]`)[0]) {
       img.setAttribute('src', blobUrl);
-    } else if ($('.prevImg4').length === 2) {
-      $('#previews').append(buildImg(targetIndex, blobUrl));
-      $('#imageBox4').hide();
     } else {
       $('#previews').append(buildImg(targetIndex, blobUrl));
       // 画像アップロードフォームを追加する処理
@@ -73,9 +70,6 @@ $(document).on('turbolinks:load', ()=> {
     count -= 1;
     if (count === 0) {
       $('.ItemForm4__image4').append('<p class="imgalert">出品画像は1枚以上必須です</p>');
-    }
-    if ($('.prevImg4').length < 3) {
-      
     }
   });
 
