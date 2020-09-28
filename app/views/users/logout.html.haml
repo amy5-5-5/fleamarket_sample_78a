@@ -1,3 +1,9 @@
+-#ヘッダー（部分テンプレート）
+=render partial:'header'
+
 .log-out
   .log-out-btn
     = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'log-out-btn'
+
+-#フッター（部分テンプレート）
+=render partial:'footer'

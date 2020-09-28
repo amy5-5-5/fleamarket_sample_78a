@@ -1,18 +1,9 @@
+-#ヘッダー（部分テンプレート）
+=render partial:'header'
+
 .mypage3
   .mypage-header3
-  -#   .mypage-header-top
-      .mypage-header-top-image3
-      .mypage-header-top-input3
-        何かお探しですか？
-    -# .mypage-header-nav-box3
-    -#   .ul.mypage-header-nav-root.list3
-    -#     .li カテゴリーから探す
-    -#     .li ブランドから探す
-    -#   .mypage-header-menu-link3
-    -#     .li いいね！一覧
-    -#     .li お知らせ
-    -#     .li やることリスト
-    -#     .li マイページ
+
   .mypage-body3
     .mypage-side-bar3   
       %nav.mypage-side-bar__nav3
@@ -147,7 +138,7 @@
       .mypage-main-content__user3
         = link_to '#',class:"mypage-main-content__user-icon3" do
           %span.image
-            = image_tag src="/assets/icon/member_photo_noimage_thumb.png", size: "60x60"
+            = image_tag src="/assets/member_photo_noimage_thumb.png", size: "60x60"
           %p ユーザー名
           %p 評価 0  出品数 0
       .mypage-main-active
@@ -161,7 +152,7 @@
             =link_to '#',class:"mypage-main-content_item-information-block3" do
               .mypage-main-content_item-information-block__image3
                 %span.image
-                  =image_tag src="/assets/logo/logo-icon.png", size: "48x48"
+                  =image_tag src="/assets/logo-icon.png", size: "48x48"
               .mypage-main-content_item-information-block__text3
                 〈まずはエントリー〉今だけ最大P1,000→最大P2,000に増量！フリペイスマート払いでもらえる
                 .mypage-main-content_item-information-block__time3
@@ -173,7 +164,7 @@
             =link_to '#',class:"mypage-main-content_item-information-block3" do
               .mypage-main-content_item-information-block__image3
                 %span.image
-                  =image_tag src="/assets/logo/logo-icon.png", size: "48x48"
+                  =image_tag src="/assets/logo-icon.png", size: "48x48"
               .mypage-main-content_item-information-block__text3
                 7日後、P500還元クーポンの有効期限が切れます！タップして詳細を確認しましょう。
                 .mypage-main-content_item-information-block__time3
@@ -185,7 +176,7 @@
             =link_to '#',class:"mypage-main-content_item-information-block3" do
               .mypage-main-content_item-information-block__image3
                 %span.image
-                  =image_tag src="/assets/logo/logo-icon.png", size: "48x48"
+                  =image_tag src="/assets/logo-icon.png", size: "48x48"
               .mypage-main-content_item-information-block__text3
                 〈販売手数料が実質0円!?〉シルバーウィークにまとめて出品!
                 .mypage-main-content_item-information-block__time3
@@ -197,7 +188,7 @@
             =link_to '#',class:"mypage-main-content_item-information-block3" do
               .mypage-main-content_item-information-block__image3
                 %span.image
-                  =image_tag src="/assets/logo/logo-icon.png", size: "48x48"
+                  =image_tag src="/assets/logo-icon.png", size: "48x48"
               .mypage-main-content_item-information-block__text3
                 事務局からの個別メッセージ[ログイン通知]
                 .mypage-main-content_item-information-block__time3
@@ -210,7 +201,7 @@
             =link_to '#',class:"mypage-main-content__todo-block3"do
               .mypage-main-content__todo-block__image3
                 %span.image
-                  =image_tag src="/assets/logo/logo-icon.png", size: "48x48"
+                  =image_tag src="/assets/logo-icon.png", size: "48x48"
               .mypage-main-content__todo-block__text3
                 ご登録のメールアドレスに認証メールを送りました。メールに記載のURLをクリックして、メールアドレスを認証してください。
                 .mypage-main-content_item-todo-block__time3
@@ -233,48 +224,14 @@
         .mypage-purchase-content-area
           .mypage-purchase-content.show
             %span.image
-              =image_tag src="/assets/logo/logo-icon-grey.png", size: "60x60"
+              =image_tag src="/assets/logo-icon-grey.png", size: "60x60"
             %p 取扱中の商品がございません
 
           .mypage-purchase-content
             %span.image
-              =image_tag src="/assets/logo/logo-icon-grey.png", size: "60x60"
+              =image_tag src="/assets/logo-icon-grey.png", size: "60x60"
             %p 過去に取引した商品がありません
 
   
-  -#mypage-footer3
-    mypage-footer-head
-      .ul フリマについて
-        li 会社概要（運営会社）
-        li採用情報
-        li プレスリリース
-        li 公式ブログ
-        liフリマロゴ利用ガイドライン
-        -# /icon %twitter
-        -# /icon facebook
-      .ul ヘルプと各種情報
-        li フリマガイド
-        li らくらくフリマ便
-        li ゆうゆうフリマ便
-        li 梱包・発送たのフリ便
-        li 車体取引ガイド
-        li フリマあんしん・あんぜん宣言！
-        li 偽ブランド品撲滅への取り組み
-        li フリマボックス
-        li 本・漫画のランキング
-      .ul プライバシーと利用規約
-        li プライバシーポリシー
-        li フリマ利用規約
-        li コンプライアンスポリシー
-        li 個人データの安全管理に係る基本方針
-        li 特定商取引に関する表記
-        li 資金決済法に基づく表示
-        li 法令遵守と犯罪防止のために
-      .ul 国
-        li 日本
-        li United States
-
-
-    .mypage-footer-bottom3
-      -# /mypage-footer-bottom-image
-      -# /mypage-footer-bottom-copyright
+-#フッター（部分テンプレート）
+=render partial:'footer'
