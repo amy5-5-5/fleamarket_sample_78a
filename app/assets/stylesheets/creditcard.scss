@@ -97,10 +97,13 @@
   width:700px;
   height:433.38px;
   background-color:#FFFFFF;
+  padding:0px 370px;
+
 }
 
 .credit-card-list-title3{
-  height:34px;
+  width: 700px;
+  height:98px;
   padding:32px 16px;
   text-align: center;
   font-size:24px;
@@ -113,13 +116,11 @@
 
 .credit-card-list-registration3{
   background-color: #FFFFFF;
-  width:375px;
-  height:68px;
+  width:343px;
   font-size:15px;
   text-align: left;
   padding:32px 0px;
-  margin-left: auto;
-  margin-right:auto;
+  margin-left:177.5px;
   background-color: #FFFFFF;
   border-bottom-style:solid;
   border-bottom-width:1px;
@@ -135,11 +136,9 @@
 
 .credit-card-select-btn3{
   background-color: #FFFFFF;
-  height:48px;
   width:375px;
   padding:32px 0px 48px;
-  margin-left:auto;
-  margin-right:auto;
+  margin-left:177.5px;
   text-decoration:none;
   p{
     font-size:17px;
@@ -158,20 +157,21 @@
   padding:0px 0px 56px;
   font-size:14px;
   height:16.38px;
-  margin-left:auto;
-  margin-right:auto;
   background-color: #FFFFFF;
   display: flex;
   text-decoration:none;
   p{
     color:#0095EE;
-    margin-left: 230px;
+    position: relative;
+    left: 400px;
+
   }
 }
 
 .credit-card-select-text-link{
   color:#0095EE;
-  margin-left:auto;
+  position:relative;
+  left:170px;
 }
 
 // フッターの上部分
