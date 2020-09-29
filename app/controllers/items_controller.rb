@@ -3,9 +3,6 @@ class ItemsController < ApplicationController
   def index
   end
 
-  def show
-  end
-
   def new
     @item = Item.new
     @item.images.new
@@ -20,6 +17,14 @@ class ItemsController < ApplicationController
       @item.images.new
       render :new
     end
+  end
+
+  def show
+    @item = Item.find(params[:id])
+  end
+
+  def edit
+    @item = Item.find(params[:id])
   end
 
   private

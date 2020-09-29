@@ -1,6 +1,6 @@
 .ItemNewContent4
   .LogoWrapper4
-    = link_to '#' do
+    = link_to root_path do
       = image_tag 'logo.png', class: 'LogoWrapper4__logo4'
   = form_with model: @item, class: "ItemForm4", local: true do |f|
     - if @item.errors.any?
