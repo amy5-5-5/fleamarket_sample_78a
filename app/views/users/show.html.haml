@@ -1,5 +1,5 @@
 -#ヘッダー（部分テンプレート）
-=render partial:'header'
+=render partial:'items/header'
 
 .mypage3
   .mypage-header3
@@ -138,7 +138,7 @@
       .mypage-main-content__user3
         = link_to '#',class:"mypage-main-content__user-icon3" do
           %span.image
-            = image_tag src="/assets/member_photo_noimage_thumb.png", size: "60x60"
+            = image_tag asset_path("member_photo_noimage_thumb.png") ,size:"60x60"
           %p ユーザー名
           %p 評価 0  出品数 0
       .mypage-main-active
@@ -152,7 +152,7 @@
             =link_to '#',class:"mypage-main-content_item-information-block3" do
               .mypage-main-content_item-information-block__image3
                 %span.image
-                  =image_tag src="/assets/logo-icon.png", size: "48x48"
+                  =image_tag asset_path("logo-icon.png"), size: "48x48"
               .mypage-main-content_item-information-block__text3
                 〈まずはエントリー〉今だけ最大P1,000→最大P2,000に増量！フリペイスマート払いでもらえる
                 .mypage-main-content_item-information-block__time3
@@ -164,7 +164,7 @@
             =link_to '#',class:"mypage-main-content_item-information-block3" do
               .mypage-main-content_item-information-block__image3
                 %span.image
-                  =image_tag src="/assets/logo-icon.png", size: "48x48"
+                  =image_tag asset_path("logo-icon.png"), size: "48x48"
               .mypage-main-content_item-information-block__text3
                 7日後、P500還元クーポンの有効期限が切れます！タップして詳細を確認しましょう。
                 .mypage-main-content_item-information-block__time3
@@ -176,7 +176,7 @@
             =link_to '#',class:"mypage-main-content_item-information-block3" do
               .mypage-main-content_item-information-block__image3
                 %span.image
-                  =image_tag src="/assets/logo-icon.png", size: "48x48"
+                  =image_tag asset_path("logo-icon.png"), size: "48x48"
               .mypage-main-content_item-information-block__text3
                 〈販売手数料が実質0円!?〉シルバーウィークにまとめて出品!
                 .mypage-main-content_item-information-block__time3
@@ -188,7 +188,7 @@
             =link_to '#',class:"mypage-main-content_item-information-block3" do
               .mypage-main-content_item-information-block__image3
                 %span.image
-                  =image_tag src="/assets/logo-icon.png", size: "48x48"
+                  =image_tag asset_path("logo-icon.png"), size: "48x48"
               .mypage-main-content_item-information-block__text3
                 事務局からの個別メッセージ[ログイン通知]
                 .mypage-main-content_item-information-block__time3
@@ -201,7 +201,7 @@
             =link_to '#',class:"mypage-main-content__todo-block3"do
               .mypage-main-content__todo-block__image3
                 %span.image
-                  =image_tag src="/assets/logo-icon.png", size: "48x48"
+                  =image_tag asset_path("logo-icon.png"), size: "48x48"
               .mypage-main-content__todo-block__text3
                 ご登録のメールアドレスに認証メールを送りました。メールに記載のURLをクリックして、メールアドレスを認証してください。
                 .mypage-main-content_item-todo-block__time3
@@ -224,14 +224,14 @@
         .mypage-purchase-content-area
           .mypage-purchase-content.show
             %span.image
-              =image_tag src="/assets/logo-icon-grey.png", size: "60x60"
+              =image_tag asset_path("logo-icon-grey.png"), size: "60x60"
             %p 取扱中の商品がございません
 
           .mypage-purchase-content
             %span.image
-              =image_tag src="/assets/logo-icon-grey.png", size: "60x60"
+              =image_tag asset_path("logo-icon-grey.png"), size: "60x60"
             %p 過去に取引した商品がありません
 
   
 -#フッター（部分テンプレート）
-=render partial:'footer'
+=render partial:'items/footer'
