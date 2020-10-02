@@ -1,0 +1,64 @@
+.single-container5
+  .single-header5
+    %h1.single-header5__logo5
+      = link_to '#' do
+        = image_tag 'logo.png', class: 'FurimaLogo5'
+    %nav.single-header5__progress5
+      %ol
+        %li.single-header5__progress5__text5--active5{ id: "first" }
+          会員情報
+          .single-header5__progress5__status5--red5
+        %li.single-header5__progress5__text5
+          お届け先住所入力
+          .single-header5__progress5__status5
+        %li.single-header5__progress5__text5{ id: "end" }
+          完了
+          .single-header5__progress5__status5
+
+.single-main5
+  .single-main5__container5.clerfix
+    %h2.single-main__head5
+      会員情報入力
+    = form_for(resource, as: resource_name, url: registration_path(resource_name, class: "signup-main__form")) do |f|
+      .single-main5__container5__form5__frame5
+        = form_for(@user, url: user_registration_path) do |f|
+          = render "devise/shared/error_messages", resource: @user
+          .form-group5
+            = f.label :ニックネーム
+            %span.form-group5__require5 必須
+            = f.text_field :nickname, {placeholder: "例) メルカリ太郎",class:'form-group5__input5'}
+          .form-group5
+            = f.label :メールアドレス
+            %span.form-group5__require5 必須
+            = f.email_field :email, {autofocus: true, autocomplete: "email", placeholder: "PC・携帯どちらでも可",class:'form-group5__input5'}
+            .form-group5
+              = f.label :パスワード
+              %span.form-group5__require5 必須
+              = f.password_field :password,{autocomplete: "new-password",placeholder: "6文字以上の半角英数字",class:'form-group5__input5',id:"password"}
+              %p.form-group5__info5 ※ 英字と数字の両方を含めて設定してください
+              .form-password-revelation-toggle
+                .checkbox-default
+                  %input#reveal_password{type: "checkbox",class:"icon-check"}
+                  %label{for: "reveal_password"} パスワードを表示する
+                .form-password-revelation-revealed-password-container
+                  %span.form-password-revelation-revealed-password
+          .form-group5
+            %label.form-group5-text5-title5 本人確認
+            %p.form-group5__info5 安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+          .form-group5
+            = f.label :"お名前(全角)"
+            %span.form-group5__require5 必須
+            .name5
+              = f.text_field :family_name, {placeholder:"例) 山田",class:'form-group5__input--half5'}
+              = f.text_field :first_name, {placeholder:"例) 彩",class:'form-group5__input-half5'}
+          .form-group5
+            = f.label :"お名前カナ(全角)"
+            %span.form-group5__require5 必須
+            .kana5
+              = f.text_field :family_name_furigana, {placeholder:"例) ヤマダ",class:'form-group5__input-half5'}
+              = f.text_field :first_name_furigana, {placeholder:"例) アヤ",class:'form-group5__input-half5'}
+          .form-group5
+            = f.submit '次へ', class: "btn-default5 btn-blue5", url: "address_path"
+  = render "devise/registrations/registration_footer"
+
+
