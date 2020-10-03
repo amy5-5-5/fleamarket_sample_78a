@@ -54,7 +54,7 @@ $(document).on('turbolinks:load', ()=> {
   $('#previews').on('click', '.js-remove4', function() {
     const targetIndex = $(this).data('index');
     const hiddenCheck = $(`input[data-index="${targetIndex}"].hidden-destroy4`);
-    if (hiddenCheck) {
+    if (hiddenCheck.length >= 1) {
       hiddenCheck.prop('checked', true);
       $(`div[data-index="${targetIndex}"]`).hide();
     } else {
