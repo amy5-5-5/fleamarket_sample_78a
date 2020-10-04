@@ -1,0 +1,237 @@
+-#ヘッダー（部分テンプレート）
+=render partial:'items/header'
+
+.mypage3
+  .mypage-header3
+
+  .mypage-body3
+    .mypage-side-bar3   
+      %nav.mypage-side-bar__nav3
+        %ul.mypage-side-bar__list1_3
+          = link_to "#" ,class:"mypage-side-bar__list3" do
+            %li マイページ
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+
+          = link_to "#" ,class:"mypage-side-bar__list3" do
+            %li お知らせ
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+
+          = link_to "#" ,class:"mypage-side-bar__list3" do
+            %li やることリスト
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+
+          = link_to "#" ,class:"mypage-side-bar__list3" do
+            %li いいね！一覧
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+
+          = link_to "#" ,class:"mypage-side-bar__list3" do
+            %li 出品する
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+
+          = link_to "#" ,class:"mypage-side-bar__list3" do
+            %li 下書き一覧
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+          
+          = link_to "#" ,class:"mypage-side-bar__list3" do
+            %li 出品した商品 - 出品中
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+
+          = link_to "#" ,class:"mypage-side-bar__list3" do
+            %li 出品した商品 - 取引中
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+          
+          = link_to "#" ,class:"mypage-side-bar__list3" do
+            %li 出品した商品 - 売却済み
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+
+          = link_to "#" ,class:"mypage-side-bar__list3" do
+            %li 購入した商品 - 取引中
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+          
+          = link_to "#" ,class:"mypage-side-bar__list3" do
+            %li 購入した商品 - 過去の取引
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+
+          = link_to "#" ,class:"mypage-side-bar__list3" do
+            %li ニュース一覧
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+          
+          = link_to "#" ,class:"mypage-side-bar__list3" do
+            %li 評価一覧
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+
+          = link_to "#" ,class:"mypage-side-bar__list3" do
+            %li ガイド
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+          
+          = link_to "#" ,class:"mypage-side-bar__list3" do
+            %li お問い合わせ
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+          
+        %h3.mypage-side-bar__nav-head3
+          フリペイ
+        %ul.mypage-side-bar__list2_3
+          = link_to "#" ,class:"mypage-side-bar__list3" do
+            %li 売上・振込申請
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+
+          = link_to "#" ,class:"mypage-side-bar__list3" do
+            %li ポイント
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+
+        %h3.mypage-side-bar__nav-head3
+          設定
+        %ul.mypage-side-bar__list3_3
+          = link_to "#" ,class:"mypage-side-bar__list3" do
+            %li プロフィール
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+
+          = link_to "#" ,class:"mypage-side-bar__list3" do
+            %li 発送元・お届け先住所変更
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+
+          = link_to "/users/creditcard" ,class:"mypage-side-bar__list3" do
+            %li 支払い方法
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+
+          = link_to "#" ,class:"mypage-side-bar__list3" do
+            %li メール/パスワード
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+
+          = link_to "#" ,class:"mypage-side-bar__list3" do
+            %li 本人情報
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+
+          = link_to "#" ,class:"mypage-side-bar__list3" do
+            %li 電話番号の確認
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+
+          = link_to "/users/log-out" ,class:"mypage-side-bar__list3" do
+            %li ログアウト
+            .mypage-side-bar__list-icon
+              =icon 'fas','chevron-right'
+
+    .mypage-main-content3
+      .mypage-main-content__user3
+        = link_to '#',class:"mypage-main-content__user-icon3" do
+          %span.image
+            = image_tag asset_path("member_photo_noimage_thumb.png") ,size:"60x60"
+          %p ユーザー名
+          %p 評価 0  出品数 0
+      .mypage-main-active
+        .mypage-main-tab-area
+          .mypage-main-tab.active
+            %p お知らせ
+          .mypage-main-tab
+            %p やることリスト
+        .mypage-main-content-area
+          .mypage-main-content.show
+            =link_to '#',class:"mypage-main-content_item-information-block3" do
+              .mypage-main-content_item-information-block__image3
+                %span.image
+                  =image_tag asset_path("logo-icon.png"), size: "48x48"
+              .mypage-main-content_item-information-block__text3
+                〈まずはエントリー〉今だけ最大P1,000→最大P2,000に増量！フリペイスマート払いでもらえる
+                .mypage-main-content_item-information-block__time3
+                  =icon 'fas','clock'
+                  1時間前
+              .mypage-main-content_item-information-block__link3
+                =icon 'fas','chevron-right'
+
+            =link_to '#',class:"mypage-main-content_item-information-block3" do
+              .mypage-main-content_item-information-block__image3
+                %span.image
+                  =image_tag asset_path("logo-icon.png"), size: "48x48"
+              .mypage-main-content_item-information-block__text3
+                7日後、P500還元クーポンの有効期限が切れます！タップして詳細を確認しましょう。
+                .mypage-main-content_item-information-block__time3
+                  =icon 'fas','clock'
+                  1日前
+              .mypage-main-content_item-information-block__link3
+                =icon 'fas','chevron-right'
+
+            =link_to '#',class:"mypage-main-content_item-information-block3" do
+              .mypage-main-content_item-information-block__image3
+                %span.image
+                  =image_tag asset_path("logo-icon.png"), size: "48x48"
+              .mypage-main-content_item-information-block__text3
+                〈販売手数料が実質0円!?〉シルバーウィークにまとめて出品!
+                .mypage-main-content_item-information-block__time3
+                  =icon 'fas','clock'
+                  2日前
+              .mypage-main-content_item-information-block__link3
+                =icon 'fas','chevron-right'
+
+            =link_to '#',class:"mypage-main-content_item-information-block3" do
+              .mypage-main-content_item-information-block__image3
+                %span.image
+                  =image_tag asset_path("logo-icon.png"), size: "48x48"
+              .mypage-main-content_item-information-block__text3
+                事務局からの個別メッセージ[ログイン通知]
+                .mypage-main-content_item-information-block__time3
+                  =icon 'fas','clock'
+                  3日前
+              .mypage-main-content_item-information-block__link3
+                =icon 'fas','chevron-right'
+
+          .mypage-main-content
+            =link_to '#',class:"mypage-main-content__todo-block3"do
+              .mypage-main-content__todo-block__image3
+                %span.image
+                  =image_tag asset_path("logo-icon.png"), size: "48x48"
+              .mypage-main-content__todo-block__text3
+                ご登録のメールアドレスに認証メールを送りました。メールに記載のURLをクリックして、メールアドレスを認証してください。
+                .mypage-main-content_item-todo-block__time3
+                  =icon 'fas','clock'
+                  28日前
+              .mypage-main-content__todo-block__link3
+                =icon 'fas','chevron-right'
+
+      .mypage-main-content__go-item-list3
+        %p 一覧を見る
+
+      .mypage-purchase-active
+        .mypage-purchase-head
+          %p 購入した商品
+        .mypage-purchase-tab-area
+          .mypage-purchase-tab.active
+            %p 取引中
+          .mypage-purchase-tab
+            %p 過去の取引
+        .mypage-purchase-content-area
+          .mypage-purchase-content.show
+            %span.image
+              =image_tag asset_path("logo-icon-grey.png"), size: "60x60"
+            %p 取扱中の商品がございません
+
+          .mypage-purchase-content
+            %span.image
+              =image_tag asset_path("logo-icon-grey.png"), size: "60x60"
+            %p 過去に取引した商品がありません
+
+  
+-#フッター（部分テンプレート）
+=render partial:'items/footer'

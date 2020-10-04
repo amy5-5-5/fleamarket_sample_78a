@@ -152,29 +152,35 @@
       width: 100%;
       height: 140px;
       display: flex;
-      .js-file_group4 {
+      .js-file_group4, .js-file_group-edit4 {
         width: 100%;
         text-align: center;
         padding: 35px;
         border: 1px dashed #ccc;
         background-color: rgb(245, 245, 245);
-        .uploadBtn4 {
+        .uploadBtn4, .uploadBtn-edit4 {
           .fa-camera {
             cursor: pointer;
             font-size: 50px;
             margin-bottom: 15px;
           }
-          .imgMsg4 {
+          .imgMsg4, .imgMsg-edit4 {
             color:  gray;
             font-size: 12px;
           }
-          .img-js4 {
+          .img-js4, .img-js-edit4 {
             width: 100%;
           }
         }
-        .hidden4 {
+        .hidden-destroy4 {
           display: none;
         }
+      }
+      .editImage4{
+        display: none;
+      }
+      .hidden4 {
+        display: none;
       }
     }
     .BtnWrap4 {
@@ -186,7 +192,7 @@
         padding: 5px;
         border-radius: 3px;
       }
-      .js-remove4 {
+      .js-remove4, .js-remove-edit4 {
         cursor: pointer;
         color: white;
         background-color: tomato;
@@ -220,13 +226,15 @@
       display: flex;
       justify-content: space-between;
       &__input4 {
+        display: flex;
         .enmark4 {
           font-size: 16px;
           height: 20px;
           margin: 10px;
         }
         .priceInput4 {
-          width: 80%;
+          width: 100%;
+          padding: 0 16px 0 16px;
         }
       }
     }
@@ -793,6 +801,17 @@
                   }
                 }   
               }       
+            }
+            .ItemEditBtn4 {
+              text-align: center;
+              margin: 35px 0;
+              &__editbtn4 {
+                text-decoration: none;
+                background-color: tomato;
+                border-radius: 4px;
+                padding: 10px 20px;
+                color: white;
+              }
             }
           }
         } 
