@@ -1,9 +1,9 @@
 class Item < ApplicationRecord
   validates_associated :images
   validates :images, presence: true
-  validates :name, presence: true
+  validates :name, presence: true, length: {maximum: 40}
   validates :text, presence: true
-  validates :price, presence: true
+  validates :price, presence: true, numericality: { only_integer: true }
   validates :category_id, presence: true
   validates :condition_id, presence: true
   validates :burden_id, presence: true
