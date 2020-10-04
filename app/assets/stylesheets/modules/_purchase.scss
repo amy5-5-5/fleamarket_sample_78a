@@ -6,7 +6,7 @@
   display: block;
   background: rgb(238, 238, 238);
   overflow: hidden;
-  .Main__ComponentOrder1{
+  &__ComponentOrder1{
     width: 600px;
     margin: 0px auto 56px;
     .Main__PageTitle1{
@@ -132,7 +132,7 @@
     }
     .OrderPayment__Component11{
       margin-bottom: 16px;
-      .OrderPayment__OrderBody1{
+      &__OrderBody1{
         border-bottom: 1px solid rgb(229, 227, 227);
         background: rgb(255, 255, 255);
         .OrderPayment__Wrap1{
@@ -192,7 +192,7 @@
           color: rgb(255, 143, 118);
           display: flex;
           justify-content: flex-end;
-          .OrderPayment__ChargeText-n2xk1e-101{
+          &__ChargeText-n2xk1e-101{
             display: inline-block;
             padding-left: 20px;
             background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik02Ljk5OTk4IDEyLjMzMzNDOS45NDU1IDEyLjMzMzMgMTIuMzMzMyA5Ljk0NTQ0IDEyLjMzMzMgNi45OTk5MkMxMi4zMzMzIDQuMDU0NCA5Ljk0NTUgMS42NjY1OSA2Ljk5OTk4IDEuNjY2NTlDNC4wNTQ0NiAxLjY2NjU5IDEuNjY2NjUgNC4wNTQ0IDEuNjY2NjUgNi45OTk5MkMxLjY2NjY1IDkuOTQ1NDQgNC4wNTQ0NiAxMi4zMzMzIDYuOTk5OTggMTIuMzMzM1pNNi45OTk5OCAxMy42NjY2QzEwLjY4MTkgMTMuNjY2NiAxMy42NjY2IDEwLjY4MTggMTMuNjY2NiA2Ljk5OTkyQzEzLjY2NjYgMy4zMTgwMiAxMC42ODE5IDAuMzMzMjUyIDYuOTk5OTggMC4zMzMyNTJDMy4zMTgwOCAwLjMzMzI1MiAwLjMzMzMxMyAzLjMxODAyIDAuMzMzMzEzIDYuOTk5OTJDMC4zMzMzMTMgMTAuNjgxOCAzLjMxODA4IDEzLjY2NjYgNi45OTk5OCAxMy42NjY2Wk02LjMzMzMxIDMuNjY2NThDNi4zMzMzMSAzLjI5ODQgNi42MzE3OSAyLjk5OTkyIDYuOTk5OTggMi45OTk5MkM3LjM2ODE3IDIuOTk5OTIgNy42NjY2NSAzLjI5ODQgNy42NjY2NSAzLjY2NjU5VjYuMzMzMjVIMTAuMzMzM0MxMC43MDE1IDYuMzMzMjUgMTEgNi42MzE3MyAxMSA2Ljk5OTkyQzExIDcuMzY4MTEgMTAuNzAxNSA3LjY2NjU5IDEwLjMzMzMgNy42NjY1OUg3LjY2NjY1VjEwLjMzMzNDNy42NjY2NSAxMC43MDE0IDcuMzY4MTcgMTAuOTk5OSA2Ljk5OTk4IDEwLjk5OTlDNi42MzE3OSAxMC45OTk5IDYuMzMzMzEgMTAuNzAxNCA2LjMzMzMxIDEwLjMzMzNWNy42NjY1OUgzLjY2NjY1QzMuMjk4NDYgNy42NjY1OSAyLjk5OTk4IDcuMzY4MTEgMi45OTk5OCA2Ljk5OTkyQzIuOTk5OTggNi42MzE3MyAzLjI5ODQ2IDYuMzMzMjUgMy42NjY2NSA2LjMzMzI1SDYuMzMzMzFWMy42NjY1OFoiIGZpbGw9IiNGRjhGNzYiLz4KPC9zdmc+Cg==) 0px center no-repeat;
@@ -379,27 +379,27 @@
       .OrderFooter__Note-dku7al-1{
         margin-bottom: 16px;
         line-height: 1.1;
-        .Typography__Component-sc-10fxrsq-0{
+        &__Component-sc-10fxrsq-0{
           font-size: 10px;
           color: rgb(127, 118, 118);
         }
-        .Typography__Component-sc-10fxrsq-1{
+        &__Component-sc-10fxrsq-1{
           font-size: 10px;
           color: rgb(127, 118, 118);
         }
-        .Typography__Component-sc-10fxrsq-2{
+        &__Component-sc-10fxrsq-2{
           font-size: 10px;
           color: rgb(127, 118, 118);
         }
-        .Typography__Component-sc-10fxrsq-3{
+        &__Component-sc-10fxrsq-3{
           font-size: 10px;
           color: rgb(127, 118, 118);
         }
-        .Typography__Component-sc-10fxrsq-4{
+        &__Component-sc-10fxrsq-4{
           font-size: 10px;
           color: rgb(127, 118, 118);
         }
-        .Typography__Component-sc-10fxrsq-5{
+        &__Component-sc-10fxrsq-5{
           font-size: 10px;
           color: rgb(127, 118, 118);
         }
