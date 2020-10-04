@@ -3,9 +3,13 @@ require 'rails_helper'
 RSpec.describe Item, type: :model do
   describe '#create' do
     context 'can save' do
-      it 'brandが無くても保存できる' do
+      it 'brandが無くても保存できる、priceが半角数字であれば保存できる' do
         item = FactoryBot.build(:item, brand: nil)
-        item.valid?
+        expect(item).to be_valid
+      end
+
+      it 'nameが40文字以下だと保存できる' do
+        item = FactoryBot.build(:item, name: '０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９')
         expect(item).to be_valid
       end
     end
@@ -15,6 +19,12 @@ RSpec.describe Item, type: :model do
         item = FactoryBot.build(:item, name: nil)
         item.valid?
         expect(item.errors[:name]).to include("を入力してください")
+      end
+
+      it 'nameが41文字以上だと保存できない' do
+        item = FactoryBot.build(:item, name: '０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０')
+        item.valid?
+        expect(item.errors[:name]).to include("は40文字以内で入力してください")
       end
 
       it 'textが無いと保存できない' do
@@ -27,6 +37,18 @@ RSpec.describe Item, type: :model do
         item = FactoryBot.build(:item, price: nil)
         item.valid?
         expect(item.errors[:price]).to include("を入力してください")
+      end
+
+      it 'priceが全角だと保存できない' do
+        item = FactoryBot.build(:item, price: '１２３４')
+        item.valid?
+        expect(item.errors[:price]).to include("は数値で入力してください")
+      end
+
+      it 'priceが数字以外だと保存できない' do
+        item = FactoryBot.build(:item, price: 'アイウエオ')
+        item.valid?
+        expect(item.errors[:price]).to include("は数値で入力してください")
       end
 
       it 'category_idが無いと保存できない' do
@@ -60,9 +82,9 @@ RSpec.describe Item, type: :model do
       end
 
       it 'imageが無いと保存できない' do
-        image = Image.new(item_id: 1, src: nil)
-        image.valid?
-        expect(image.errors[:src]).to include("を入力してください")
+        item = FactoryBot.build(:item, )
+        item.valid?
+        expect(item.errors[:images]).to include("を入力してください")
       end
     end
   end

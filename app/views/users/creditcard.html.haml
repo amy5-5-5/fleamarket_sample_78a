@@ -1,0 +1,22 @@
+-#ヘッダー（部分テンプレート）
+=render partial:'items/header'
+
+.credit-card-list3
+  .credit-card-list-title3
+    %p 支払い方法
+  .credit-card-list-registration3
+    %p クレジットカード
+    =link_to '#' ,class:"credit-card-list-registration-btn3"do
+      .credit-card-list-registration-btn3
+        %p +新規クレジットカードを登録する
+  .credit-card-select-btn3
+    =link_to '#' ,class:"credit-card-select-btn3"do
+      %p 選択した支払い方法を使う
+  .credit-card-select-text3
+    =link_to '#',class:"credit-card-select-text3"do
+      %p 支払い方法について
+    .credit-card-select-text-link
+      =icon 'fas','chevron-right'
+
+-#フッター（部分テンプレート）
+=render partial:'items/footer'

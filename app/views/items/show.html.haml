@@ -82,6 +82,9 @@
                   %th 発送日の目安
                   %td 
                     = @item.shipping_date.name
+                  %td 1-2日で発送
+          .ItemEditBtn4
+            = link_to '商品情報を編集する', edit_item_path(params[:id]), class: "ItemEditBtn4__editbtn4"
           .optionalArea2
             %ul.like2
               %li.likeBtn2

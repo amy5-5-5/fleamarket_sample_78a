@@ -1,0 +1,456 @@
+// Place all the styles related to the items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+// ヘッダー
+.pcHeader1{
+  padding: 0 60px;
+  margin-left: 135px;
+  &__headerInner1{
+    max-width:1040px;
+    width: 100%;
+    min-height: 82px;
+    padding: 15px 0 0;
+
+  }
+  &__mainHeader1{
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &__FURIMA_icon1{
+    margin-right:50px;
+    border-radius:4px;
+    display: block;
+    .serchbtn{
+        width:100px;
+        display: block;
+      }
+      .image{
+        width: 160px;
+        vertical-align: bottom;
+        padding-right: 20px;
+      }
+  }
+  &__searchBox1{
+    margin-left: auto;
+    width: 600%;
+    .form{
+      display: flex;
+      margin-bottom: 5px;
+      width: 100%;
+    }
+    .class-name__text{
+      width: 100%;
+      height:36px;
+      padding: 0 0 0 5px;
+    }
+    .fa-search{
+      color: white ;
+      width: 36px;
+      border: 0;
+      cursor: pointer;
+      background-color: #3CCACE;
+      padding: 8px;
+    }
+  } 
+  &__nav1{
+    font-size: 14px;
+    display: flex;
+    margin-bottom: 10px;
+    .listsLeft1{
+      position: relative;
+      display: flex;
+    }
+    .listsLeft__item--first1{
+      text-decoration: none;
+      padding-right:   20px;
+      line-height: 38px;
+    }
+    .listsLeft__item1{
+      display: flex;
+      line-height: 38px;
+    }
+    .listsRight1{
+      margin-left: auto;
+      display: flex;
+    }
+    .listsRight__item--login1{
+      color: #333;
+      line-height: 38px;
+      padding-right: 20px;
+    }
+    .listsRight__item--new1{
+      color: #333;
+      line-height: 38px;
+    }
+  }
+}
+
+
+.mypage3{
+  color:#333333;
+  font-size:14px;
+  width:1440px;
+  background-color: #F5F5F5;
+}
+
+
+.mypage-body3{
+  height:1341px;
+  width:1020px;
+  background-color: #f5f5f5;
+  margin:40px 210px 0px;
+  padding:0px 0px 40px;
+  display:flex;
+  justify-content: space-between;
+}
+
+
+.mypage-side-bar3{
+  width:280px;
+  margin-top:40px;
+} 
+
+.mypage-side-bar__list3{
+  background-color: #ffffff;
+  list-style: none;
+  padding: 16px;
+  height:48px;
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  border-bottom-style: solid;
+  border-bottom-width:1px;
+  border-bottom-color:#F5F5F5;
+  text-decoration: none;
+  &:link{
+    color:#333333
+  }
+  &:visited{
+    color:#333333
+  }
+  &:hover {
+    background-color: #FAFAFA;
+  }
+
+}
+
+.mypage-side-bar__nav-head3{
+  font-size: 16px;
+  height:16px;
+  margin:40px 0px 8px;
+  font-weight: bold;
+}
+
+.mypage-main-content3{
+  height:1189px;
+  width:700px;
+}
+
+.mypage-main-content__user3{
+  background-image:url(/assets/mypage-background.jpeg);
+  background-size:cover;
+  background-position:center;
+  height:200px;
+  text-align: center;
+  padding:20px;
+  margin-top:40px;
+}
+
+.mypage-main-content__user-icon3{
+  text-decoration: none;
+
+  p{
+    margin-top:8px;
+  }
+  &:link{
+    color:#333333
+  }
+  &:visited{
+    color:#333333
+  }
+}
+
+
+.mypage-main-active{
+
+}
+
+.mypage-main-tab-area{
+  display:flex;
+  font-size:16px;
+  font-style:bold;
+  height:72px;
+  text-align: center;
+  line-height:72px;
+  .mypage-main-tab{
+    width:350px;
+    background-color: #eee;
+  }
+  .mypage-main-tab.active{
+    background-color: #FFFFFF;
+    width:350px;
+    border-top-style:solid;
+    border-top-color:red;
+    border-top-width:3px;
+  }
+}
+
+.mypage-main-content-area {
+  background-color: #FFFFFF;
+  .mypage-main-content {
+    display: none;
+  }
+  .mypage-main-content.show {
+    display: block;
+  }
+}
+
+
+.mypage-main-content_item-information-block3{
+  display: flex;
+  padding:16px;
+  text-decoration: none;
+  border-bottom-style: solid;
+  border-bottom-width:1px;
+  border-bottom-color:#F5F5F5;
+  &:link{
+    color:#333333
+  }
+  &:visited{
+    color:#333333
+  }
+  &:hover {
+    background-color: #FAFAFA;
+  }
+}
+
+.mypage-main-content_item-information-box3{
+  display: flex;
+  
+}
+
+.mypage-main-content_item-information-block-image3{
+  width:48px;
+}
+
+.mypage-main-content_item-information-block-text3{
+  width:452px;
+  margin:0px 40px 0px 68px;
+  
+}
+
+.mypage-main-content__todo-block__link3{
+
+}
+
+.mypage-main-content__todo-block3{
+  text-decoration: none;
+  display: flex;
+  border-bottom-style: solid;
+  border-bottom-width:1px;
+  border-bottom-color:#F5F5F5;
+  justify-content: space-between;
+  padding:16px;
+  &:link{
+    color:#333333
+  }
+  &:visited{
+    color:#333333
+  }
+  &:hover {
+    background-color: #FAFAFA;
+  }
+}
+
+.mypage-main-content__go-item-list3{
+  vertical-align: center;
+  padding:16px;
+  background-color: #FFFFFF;
+  text-align: center;
+ 
+  p{
+    background-color: #EEEEEE;
+    width:668px;
+    height:56px;
+    line-height: 56px;
+  }
+  
+}
+
+.mypage-purchase-head{
+  margin-top:40px;
+  padding:16px;
+  background:#FAFAFA;
+  font-style:bold;
+  font-size:16px;
+  line-height: 36px;
+
+}
+
+.mypage-purchase-tab-area{
+  height:72px;
+  font-size:16px;
+  background-color:#F5F5F5;
+  line-height:72px;
+  display:flex;
+  text-align: center;
+  .mypage-purchase-tab{
+    width:350px;
+    background-color: #eee;
+  }
+  .mypage-purchase-tab.active{
+    background-color: #FFFFFF;
+    width:350px;
+    border-top-style:solid;
+    border-top-color:red;
+    border-top-width:3px;
+  }
+}
+
+
+.mypage-purchase-content-area{
+  background-color: #FFFFFF;
+
+  .mypage-purchase-content{
+    display:none;
+    height:236px;
+    padding:100px 0px 60px;
+    color:#CCCCCC;
+    font-size:16px;
+    text-align:center
+  }
+  .mypage-purchase-content.show{
+    display:block;
+    height:236px;
+    padding:100px 0px 60px;
+    color:#CCCCCC;
+    font-size:16px;
+    text-align:center
+  }
+}
+
+// フッターの上部分
+.appBanner1{
+  background-image: image-url("bg-appBanner-pict.jpg");
+  padding: 100px 40px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  max-width:1440px;
+  .inner1{
+    color: #fff;
+    text-align: center;
+    .inner__title1{
+      text-shadow: 0 0 5px rgba(0,0,0,0.4);
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.4;
+    }
+    .inner__text1{
+      font-size: 35px;
+      text-shadow: 0 0 5px rgba(0,0,0,0.4);
+    }
+    .inner__icon1{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 20px auto 0;
+      .aBtn1{
+        margin-right: 10px;
+        .aBtn{
+          vertical-align: bottom;
+        }
+      }
+      .gBtn1{
+        margin-right: 10px;
+        .gBtn{
+          vertical-align: bottom;
+        }
+      }
+    }
+  }
+}
+
+
+// フッター
+.footer1{
+  padding: 60px 0;
+  color: #fff;
+  background-color: #272727;
+  text-align: center;
+  max-width:1440px;
+    .contents{
+      max-width: 840px;
+      margin: 0 auto;
+      display: flex;
+      .content{
+        display: flex;
+        flex-direction: column;
+        width: calc(1 / 3 * 100%);
+        margin: 0 2% 0 0;
+      .content__head{
+        margin: 0 0 20px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      ul{
+        list-style: none;
+      }
+          li{
+            a{
+            font-weight: normal;
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 32px;
+          }
+        } 
+      }
+    }
+  .footer__logo1{  
+    max-width: 160px;
+    width: 100%;
+    margin: 0 auto;
+    .kuro{
+      box-sizing: border-box;
+      .image{ 
+        width: 110%;
+        vertical-align: bottom;
+      }
+    }
+      .p{
+        font-size: 14px;
+      }
+  }
+}
+li{
+  cursor: pointer;
+  text-decoration: underline;
+  list-style: none;
+  text-decoration: none;
+}
+.purchaseBtn{
+    width: 120px;
+    background: #3CCACE;
+    text-align: center;
+    border-radius: 4%;
+    bottom: 32px;
+    right: 32px;
+    position: fixed;
+    padding: 15px;
+}
+  .purchaseBtn__text{
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
