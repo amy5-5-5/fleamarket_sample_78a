@@ -683,17 +683,17 @@
                 width: 100%;
                 vertical-align: bottom;
               }
-              .iteminfo2_2 {
-                display: flex;
-                justify-content: center;
-                margin-top: 10px;
-                .itemList2_2 {
-                   margin: 0 10px 0 0;
-                  .img2_2 {
-                    object-fit: cover;
-                    height: 90px;
-                  }
-                }
+            }
+          }
+          .iteminfo2_2 {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            .itemList2_2 {
+               margin: 0 10px 0 0;
+              .img2_2 {
+                object-fit: cover;
+                height: 90px;
               }
             }
           }
