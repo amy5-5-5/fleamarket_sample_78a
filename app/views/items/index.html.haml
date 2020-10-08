@@ -132,7 +132,8 @@
         - @mens_items.each do |item|
           .productList1
             .productList--img1
-              = image_tag item.images[0].src.url, width: "220px", height:"150px"
+              = link_to item_path(item.id) do
+                = image_tag item.images[0].src.url, width: "220px", height:"150px"
             .productList--body1
               .name1
                 %span= item.name
@@ -156,8 +157,7 @@
       .productLists1
         - @chanel_brands.each do |item|
           .productList1
-            -# あとで、item_path(params[:id])に変える
-            = link_to '/items/15' do
+            = link_to item_path(item.id) do
               .productList--img1
                 = image_tag item.images[0].src.url, width: "220px", height:"150px"
               .productList--body1
