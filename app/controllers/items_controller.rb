@@ -1,6 +1,9 @@
 class ItemsController < ApplicationController
 
+  #商品一覧表示
   def index
+    @mens_items = Item.where(category_id:"2")
+    @chanel_brands = Item.where(brand:"シャネル")
   end
 
   def new
@@ -50,4 +53,5 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:name, :text, :condition_id, :category_id, :burden_id, :area_id, :shipping_date_id, :price, :brand, images_attributes: [:src, :_destroy, :id])
   end
+
 end
