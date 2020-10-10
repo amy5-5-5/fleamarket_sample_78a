@@ -126,169 +126,53 @@
       ピックアップカテゴリー
     .productBox1
       .productHead1
-        .title1
-          新規投稿商品
+        .title1 
+          メンズ新着商品
       .productLists1
-        .productList1
-          .productList--img1
-            = image_tag src="niku.png", width: "220px", height:"150px"
-          .productList--body1
-            .name1
-              テスト
-            .details1
+        - @mens_items.each do |item|
+          .productList1
+            .productList--img1
+              = link_to item_path(item.id) do
+                = image_tag item.images[0].src.url, width: "220px", height:"150px"
+            .productList--body1
+              .name1
+                %span= item.name
+              .details1
               .ul1
-                10000円
+                %span= item.price
                 %form.form
                   = icon('fas', 'star', class: 'icon')
                   1
                   %br
-            .p1
-              (税込)
-        .productList1
-          .productList--img1
-            = image_tag src="pasuta.png", width: "220px", height:"150px"
-          .productList--body1
-            .name1
-              ee
-            .details1
-              .ul1
-                1000円
-                %form.form
-                  = icon('fas', 'star', class: 'icon')
-                  0
-                  %br
-            .p1
-              (税込)
-        .productList1
-          .productList--img1
-            = image_tag src="sakana.png", width: "220px", height:"150px"
-          .productList--body1
-            .name1
-              product3
-            .details1
-              .ul1
-                30000円
-                %form.form
-                  = icon('fas', 'star', class: 'icon')
-                  0
-                  %br
-            .p1
-              (税込)
-        .productList1
-          .productList--img1
-            = image_tag src="gyoza.png", width: "220px", height:"150px"
-          .productList--body1
-            .name1
-              product2
-            .details1
-              .ul1
-                20000円
-                %form.form
-                  = icon('fas', 'star', class: 'icon')
-                  0
-                  %br
-            .p1
-              (税込)
-        .productList1
-          .productList--img1
-            = image_tag src="kare.png", width: "220px", height:"150px"
-          .productList--body1
-            .name1
-              product1
-            .details1
-              .ul1
-                10000円
-                %form.form
-                  = icon('fas', 'star', class: 'icon')
-                  0
-                  %br
-            .p1
-              (税込)
+              .p1
+                円(税込)
+
   .pickupContainer1
     .head1
       ピックアップブランド
     .productBox1
       .productHead1
         .title1
-          アーカイバ
+          シャネル新着商品
       .productLists1
-        .productList1
-          .productList--img1
-            -# あとで、item_path(params[:id])に変える
-            = link_to '/items/15' do
-              = image_tag src="niku.png", width: "220px", height:"150px"
-          .productList--body1
-            .name1
-              テスト
-            .details1
-              .ul1
-                10000円
-                %form.form
-                  = icon('fas', 'star', class: 'icon')
-                  1
-                  %br
-            .p1
-              (税込)
-        .productList1
-          .productList--img1
-            = image_tag src="pasuta.png", width: "220px", height:"150px"
-          .productList--body1
-            .name1
-              ee
-            .details1
-              .ul1
-                1000円
-                %form.form
-                  = icon('fas', 'star', class: 'icon')
-                  0
-                  %br
-            .p1
-              (税込)
-        .productList1
-          .productList--img1
-            = image_tag src="sakana.png", width: "220px", height:"150px"
-          .productList--body1
-            .name1
-              product3
-            .details1
-              .ul1
-                30000円
-                %form.form
-                  = icon('fas', 'star', class: 'icon')
-                  0
-                  %br
-            .p1
-              (税込)
-        .productList1
-          .productList--img1
-            = image_tag src="gyoza.png", width: "220px", height:"150px"
-          .productList--body1
-            .name1
-              product2
-            .details1
-              .ul1
-                20000円
-                %form.form
-                  = icon('fas', 'star', class: 'icon')
-                  0
-                  %br
-            .p1
-              (税込)
-        .productList1
-          .productList--img1
-            = image_tag src="kare.png", width: "220px", height:"150px"
-          .productList--body1
-            .name1
-              product1
-            .details1
-              .ul1
-                10000円
-                %form.form
-                  = icon('fas', 'star', class: 'icon')
-                  0
-                  %br
-            .p1
-              (税込)
+        - @chanel_brands.each do |item|
+          .productList1
+            = link_to item_path(item.id) do
+              .productList--img1
+                = image_tag item.images[0].src.url, width: "220px", height:"150px"
+              .productList--body1
+                .name1
+                  %span= item.name
+                .details1
+                .ul1
+                  %span= item.price
+                  %form.form
+                    = icon('fas', 'star', class: 'icon')
+                    1
+                    %br
+                .p1
+                  円(税込)
+
 .appBanner1
   .inner1
     .inner__title1
