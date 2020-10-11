@@ -47,18 +47,30 @@ Things you may want to cover:
 * has_many comments
 * has_many likes
 
+## Credit_cardsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|references|foreign_key: true|
+|customer_id|string|null: false|
+|card_id|string|null: false|
+
+
 
 ## Itemsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|price|integer|null: false|
 |text|text|null: false|
-|size|string||
+|condition|string|null: false|
+|burden|string|null: false|
+|area|string|null: false|
 |shipping_date|string|null: false|
+|price|integer|null: false|
 |brand_id|references|foreign_key: true|
 |user_id|references|foreign_key: true, null: false|
 |category_id|referemces|foreign_key: ture|
+|seller_id|references|foreign_key: true|
+|buyer_id|references|foreign_key: true|
 
 ### Association
 * belongs_to user
