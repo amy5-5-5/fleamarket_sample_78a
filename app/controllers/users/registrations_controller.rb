@@ -21,7 +21,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     session["devise.regist_data"] = {user: @user.attributes}
     session["devise.regist_data"][:user]["password"] = params[:user][:password]
     @address = @user.build_address
-    render :new_address
+    render :new_address and return
   end
 
   def create_address
@@ -38,9 +38,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     sign_in(:user, @user)
   end
 
-#    session["devise.regist_data"]["user"].clear
-#    sign_in(:user, @user)
-#  end
 
   protected
   def configure_sign_up_params

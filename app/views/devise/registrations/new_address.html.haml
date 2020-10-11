@@ -1,24 +1,21 @@
 .single-container5
-  %header.single-header5
+  .single-header5
     %h1.single-header5__logo5
-      = link_to "#" do
+      = link_to '#' do
         = image_tag 'logo.png', class: 'FurimaLogo5'
     %nav.single-header5__progress5
       %ol
-        %li.single-header5__progress5__text5{ id: "first" }
+        %li.single-header5__progress5__text5--active5
           会員情報
           .single-header5__progress5__status5--red5
-        %li.single-header5__progress5__text5--active5
+        %li.single-header5__progress5__text5--active5{ id: "second" }
           お届け先住所入力
           .single-header5__progress5__status5--red5
-        %li.single-header5__progress5__text5
-          支払い方法
-          .single-header5__progress5__status5
         %li.single-header5__progress5__text5{ id: "end" }
           完了
-          .single-header5__progress5__status5
-  %main.single-main5
-    %section.single-main5__container
+          .single-header5__progress5__status5  
+  .single-main5
+    %section.single-main5__container5.clerfix
       %h2.single-main5__container5__title5
         住所入力
       .single-main5__container5__form5__frame5
@@ -41,7 +38,7 @@
             %span.form-group5__require5 必須
             = f.text_field :street, autofocus: true, placeholder: "例）青葉1-1-1", class: 'form-group5__input5'
           .form-group5
-            = f.submit '次へ', class: "btn-default5 btn-blue5", url: "creditcard_path"
-  = render "devise/registrations/registration_footer"
+            = f.submit '次へ', class: "btn-default5 btn-blue5", url: "address_path"
+  = render "registration_footer"
 
   
