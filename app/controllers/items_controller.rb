@@ -6,6 +6,15 @@ class ItemsController < ApplicationController
     @chanel_brands = Item.where(brand:"シャネル")
   end
 
+
+  def purchase
+  end
+
+  def show
+  end
+
+
+
   def new
     @item = Item.new
     @item.images.new
@@ -52,7 +61,12 @@ class ItemsController < ApplicationController
   private
   
   def item_params
+
+    params.require(:item).permit(:name, :text, :condition_id, :category_id, :burden_id, :area_id, :shipping_date_id, :price, :brand, images_attributes: [:src])
+
+
     params.require(:item).permit(:name, :text, :condition_id, :category_id, :burden_id, :area_id, :shipping_date_id, :price, :brand, images_attributes: [:src, :_destroy, :id])
+
   end
 
 end
