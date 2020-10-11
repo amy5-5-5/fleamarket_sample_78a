@@ -41,7 +41,7 @@
       .labelArea4
         %p.label4 カテゴリー
         %span.required4 必須
-      = f.collection_select :category_id, Category.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput4 lineInput4 select4"}
+      = f.collection_select :category_id, Category.roots, :id, :name, {include_blank: "選択してください"}, {class: "itemInput4 lineInput4 select4"}
       .labelArea4
         %p.label4 ブランド
         %span.any4 任意
