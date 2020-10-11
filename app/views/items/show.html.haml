@@ -25,23 +25,30 @@
     .contentRight2
       .itemBox2
         %h2.itemBox2__name2 
-          テスト
+          = @item.name
         .itemBox2__body2
           %ul.iteminfo1_2
-            %li.itemList1_2
-              = image_tag asset_path("beef.jpeg") ,class: "img1_2"
-              %ul.iteminfo2_2
+            - @item.images.each_with_index do |image, i|
+              - if i === 0
+                %li.itemList1_2
+                  = image_tag image.src.url,size:"650x420"
+          %ul.iteminfo2_2
+            - @item.images.each_with_index do |image, i|
+              - if i > 0
                 %li.itemList2_2
-                  = image_tag asset_path("beef2.jpeg") ,class: "img2_2"
+                  = image_tag image.src.url,size:"150x210"                   
+              
         .itemContent2
           %span.price2
-            ¥10000 
+            = @item.price
+            円 
           .itemContent2__pricedetail2
             %span.tax2
               (税込)
             %span.shipping2
               送料込み  
-          .itemDetail2 テストテストテストテストテスト
+          .itemDetail2
+            =@item.text
           .table2
             %table.detail2
               %tbody.tbody2
@@ -51,11 +58,8 @@
                 %tr
                   %th カテゴリー
                   %td
-                    = link_to 'レディース', '#' ,class: "category2"
-                    %br/
-                    = link_to 'トップス', '#' ,class: "category2"
-                    %br/
-                    = link_to 'Tシャツ/カットソー(半袖/袖なし)', '#',class: "category2"
+                    = link_to '#' ,class: "category2" do
+                      = @item.category.name
                 %tr
                   %th ブランド
                   %td
@@ -64,19 +68,24 @@
                   %td
                 %tr
                   %th 商品の状態
-                  %td 新品/未使用
+                  %td
+                    = @item.condition.name
                 %tr
                   %th 配送料の負担
-                  %td 送料込み（出品者負担）
+                  %td 
+                    = @item.burden.name
                 %tr
                   %th 発送元の地域
                   %td
-                    = link_to '北海道', '#' ,class: "area2"
+                    = link_to '#',class: "category2" do 
+                      = @item.area.name
                 %tr
                   %th 発送日の目安
-                  %td 1-2日で発送
+                  %td 
+                    = @item.shipping_date.name
           .ItemEditBtn4
             = link_to '商品情報を編集する', edit_item_path(params[:id]), class: "ItemEditBtn4__editbtn4"
+            = link_to '商品情報を削除する', item_path(params[:id]), method: "DELETE", class: "ItemEditBtn4__deletebtn4"
           .optionalArea2
             %ul.like2
               %li.likeBtn2
@@ -128,7 +137,3 @@
                     %li.contenticon2
                       %i.fa.fa-star 1  
 = render partial: 'footer'
-
-
-
-                  

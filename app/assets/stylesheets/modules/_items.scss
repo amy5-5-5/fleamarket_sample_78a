@@ -616,6 +616,8 @@
         .productLists1{
           width: 780px;
           margin: 26px auto;
+          margin-bottom: 0;
+          padding-bottom: 26px;
           display: flex;
           justify-content: space-around;
             .productList1{
@@ -625,6 +627,7 @@
               a{
                 background-color: #fff;
                 display: inline-block;
+                text-decoration: none;
               }
                 .productList--img1{
                   width: 220px;
@@ -691,17 +694,17 @@
                 width: 100%;
                 vertical-align: bottom;
               }
-              .iteminfo2_2 {
-                display: flex;
-                justify-content: center;
-                margin-top: 10px;
-                .itemList2_2 {
-                   margin: 0 10px 0 0;
-                  .img2_2 {
-                    object-fit: cover;
-                    height: 90px;
-                  }
-                }
+            }
+          }
+          .iteminfo2_2 {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            .itemList2_2 {
+               margin: 0 10px 0 0;
+              .img2_2 {
+                object-fit: cover;
+                height: 90px;
               }
             }
           }
@@ -803,9 +806,24 @@
               }       
             }
             .ItemEditBtn4 {
+              display: flex;
+              flex-direction: column;
               text-align: center;
               margin: 35px 0;
               &__editbtn4 {
+                display: inline-block;
+                margin: 10px auto;
+                width: 60%;
+                text-decoration: none;
+                background-color:#3CCACE;
+                border-radius: 4px;
+                padding: 10px 20px;
+                color: white;
+              }
+              &__deletebtn4 {
+                display: inline-block;
+                margin: 10px auto;
+                width: 60%;
                 text-decoration: none;
                 background-color: tomato;
                 border-radius: 4px;

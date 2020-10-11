@@ -1,6 +1,9 @@
 class ItemsController < ApplicationController
 
+  #商品一覧表示
   def index
+    @mens_items = Item.where(category_id:"2")
+    @chanel_brands = Item.where(brand:"シャネル")
   end
 
 
@@ -23,6 +26,7 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to root_path
     else
+      @item.images = []
       @item.images.new
       render :new
     end
@@ -45,6 +49,15 @@ class ItemsController < ApplicationController
     end
   end
 
+  def destroy
+    @item = Item.find(params[:id])
+    if @item.destroy
+       redirect_to root_path
+    else
+      render :show
+    end
+  end
+
   private
   
   def item_params
@@ -55,4 +68,5 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:name, :text, :condition_id, :category_id, :burden_id, :area_id, :shipping_date_id, :price, :brand, images_attributes: [:src, :_destroy, :id])
 
   end
+
 end
