@@ -1,7 +1,3 @@
-// Place all the styles related to the items controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 * {
   box-sizing: border-box;
 }
@@ -118,7 +114,7 @@
       display: flex;
       .required4 {
         font-size: 12px;
-        height: 20px;
+        line-height: 20px;
         font-weight: bold;
         background-color: red;
         margin: 10px 15px;
@@ -128,7 +124,7 @@
       }
       .any4 {
         font-size: 12px;
-        height: 20px;
+        line-height: 20px;
         font-weight: bold;
         background-color: #ccc;
         margin: 10px 15px;
@@ -597,67 +593,67 @@
     padding: 80px 0 0;
     background-color: #f8f8f8;
     height: 100%;
-      .head1{
+    .head1{
+      text-align: center;
+      font-size: 28px;
+      line-height: 1.4;
+      font-weight: bold;
+    }
+    .productBox1{
+      .productHead1{
         text-align: center;
-        font-size: 28px;
-        line-height: 1.4;
-        font-weight: bold;
-      }
-      .productBox1{
-        .productHead1{
-          text-align: center;
-            .title1{
-              font-weight: bold;
-              font-size: 24px;
-              text-decoration: none;
-              color: #3CCACE;
-            }
+        .title1{
+          font-weight: bold;
+          font-size: 24px;
+          text-decoration: none;
+          color: #3CCACE;
         }
-        .productLists1{
-          width: 780px;
-          margin: 26px auto;
-          margin-bottom: 0;
-          padding-bottom: 26px;
-          display: flex;
-          justify-content: space-around;
-            .productList1{
-              width: 220px;
-              display: inline-block;
-              float: left;
-              a{
-                background-color: #fff;
-                display: inline-block;
-                text-decoration: none;
-              }
-                .productList--img1{
-                  width: 220px;
-                  height: 150px;
-                  position: relative;
-                  overflow: hidden;
-                  margin: 0;
-                  z-index: auto;
-                }
-                .productList--body1{
-                  background-color: white;
-                  color: #333;
-                  padding: 16px;   
-                }
-                  .details1{
-                    font-size: 16px;
-                  }
-                  .ul1{
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                  }
-                  .p1{
-                    font-size: 10px;
-                    text-align: left;
-                  }
-            }
+      }
+      .productLists1{
+        width: 780px;
+        margin: 26px auto;
+        margin-bottom: 0;
+        padding-bottom: 26px;
+        display: flex;
+        justify-content: space-around;
+        .productList1{
+          width: 220px;
+          display: inline-block;
+          float: left;
+          a{
+            background-color: #fff;
+            display: inline-block;
+            text-decoration: none;
+          }
+          .productList--img1{
+            width: 220px;
+            height: 150px;
+            position: relative;
+            overflow: hidden;
+            margin: 0;
+            z-index: auto;
+          }
+          .productList--body1{
+            background-color: white;
+            color: #333;
+            padding: 16px;   
+          }
+          .details1{
+            font-size: 16px;
+          }
+          .ul1{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+          .p1{
+            font-size: 10px;
+            text-align: left;
+          }
         }
       }
     }
+  }
 }
 
 // 商品詳細画面メイン
