@@ -1,7 +1,7 @@
 .single-container5
   .single-header5
     %h1.single-header5__logo5
-      = link_to '#' do
+      = link_to root_path do
         = image_tag 'logo.png', class: 'FurimaLogo5'
     %nav.single-header5__progress5
       %ol
@@ -24,7 +24,7 @@
           .form-group5
             = f.label :郵便番号
             %span.form-group5__require5 必須
-            = f.text_field :zipcode,{autofocus: true, placeholder: "例）123-4567", class: 'form-group5__input5'}
+            = f.text_field :zip_code,{autofocus: true, placeholder: "例）123-4567", class: 'form-group5__input5'}
           .form-group5
             = f.label :都道府県
             %span.form-group5__require5 必須

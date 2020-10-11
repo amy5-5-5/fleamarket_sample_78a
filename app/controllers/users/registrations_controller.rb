@@ -45,7 +45,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def address_params
-    params.require(:address).permit(:address,:zipcode,:prefecture,:city,:street)
+    params.require(:address).permit(:address,:zip_code,:prefecture,:city,:street)
   end
   #   super
   # end
