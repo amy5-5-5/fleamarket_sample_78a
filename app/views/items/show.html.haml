@@ -2,7 +2,7 @@
 %nav.navbar2
   %ul.navbar2__lists
     %li.navlist2
-      = link_to 'FURIMA', '#' ,class: 'navContent2'
+      = link_to 'FURIMA', '/' ,class: 'navContent2'
     %li.navlist2
       %i.fa.fa-angle-right
     %li.navlist2
@@ -63,6 +63,7 @@
                 %tr
                   %th ブランド
                   %td
+                    = @item.brand
                 %tr
                   %th 商品のサイズ
                   %td
