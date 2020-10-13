@@ -2,8 +2,8 @@ class ItemsController < ApplicationController
 
   #商品一覧表示
   def index
-    @mens_items = Item.where(category_id:"2")
-    @chanel_brands = Item.where(brand:"シャネル")
+    @mens_items = Item.where(category_id:"2").includes(:user)
+    @chanel_brands = Item.where(brand:"シャネル").includes(:user)
   end
 
 
@@ -21,7 +21,6 @@ class ItemsController < ApplicationController
   end
 
   def create
-    # ログインユーザーのIDを自動保存する処理が必要（ユーザー機能ができてから）
     @item = Item.new(item_params)
     if @item.save
       redirect_to root_path
@@ -61,12 +60,7 @@ class ItemsController < ApplicationController
   private
   
   def item_params
-
-    params.require(:item).permit(:name, :text, :condition_id, :category_id, :burden_id, :area_id, :shipping_date_id, :price, :brand, images_attributes: [:src])
-
-
-    params.require(:item).permit(:name, :text, :condition_id, :category_id, :burden_id, :area_id, :shipping_date_id, :price, :brand, images_attributes: [:src, :_destroy, :id])
-
+    params.require(:item).permit(:name, :text, :condition_id, :category_id, :burden_id, :area_id, :shipping_date_id, :price, :brand, images_attributes: [:src, :_destroy, :id]).merge(user_id: current_user.id)
   end
 
 end
