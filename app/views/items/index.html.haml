@@ -1,7 +1,3 @@
--# %h1 Items#index
--# %p Find me in app/views/items/index.html.erb
-
-
 .pcHeader1
   .pcHeader1__headerInner1
     .pcHeader1__mainHeader1
@@ -23,14 +19,14 @@
       .listsRight1
         .listsRight__item--login1
           - if current_user 
-            = link_to users_log_out_path do
+            = link_to users_log_out_path, class: "headerlink4" do
               ログアウト
           - else
-            = link_to new_user_session_path do
+            = link_to new_user_session_path, class: "headerlink4" do
               ログイン
         .listsRight__item--new1
           - unless current_user
-            = link_to new_user_registration_path do
+            = link_to new_user_registration_path, class: "headerlink4" do
               新規会員登録
 .main1
   .main1__mainVisual1
