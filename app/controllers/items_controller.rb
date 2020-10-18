@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :nonlogin_user, only: [:purchase, :new, :create, :edit, :update, :destroy]
 
   def index
     @mens_items = Item.where(category_id:"2").includes(:user)
@@ -54,6 +55,14 @@ class ItemsController < ApplicationController
   
   def item_params
     params.require(:item).permit(:name, :text, :condition_id, :category_id, :burden_id, :area_id, :shipping_date_id, :price, :brand, images_attributes: [:src, :_destroy, :id]).merge(user_id: current_user.id)
+  end
+
+  protected
+
+  def nonlogin_user
+    unless current_user
+      redirect_to root_path
+    end
   end
 
 end
