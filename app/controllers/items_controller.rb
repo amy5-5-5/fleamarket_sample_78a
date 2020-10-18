@@ -1,19 +1,12 @@
 class ItemsController < ApplicationController
 
-  #商品一覧表示
   def index
     @mens_items = Item.where(category_id:"2").includes(:user)
     @chanel_brands = Item.where(brand:"シャネル").includes(:user)
   end
 
-
   def purchase
   end
-
-  def show
-  end
-
-
 
   def new
     @item = Item.new
