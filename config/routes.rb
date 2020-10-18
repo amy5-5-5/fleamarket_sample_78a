@@ -10,18 +10,21 @@ Rails.application.routes.draw do
 
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  get 'items/purchase' => "items#purchase"
+  # get 'items/purchase' => "items#purchase"
 
 
   #ユーザー管理、マイページ実装用（onlyで必要な機能だけ！
 
-  get 'users/show' => 'users#show'
   get 'users/log-out' => 'users#logout'
   get 'users/creditcard' => 'users#creditcard'
   resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  resources :items
+  resources :items do
+    member do
+      get :purchase
+    end
+  end
   
   resources :card, only: [:new, :show] do
     collection do

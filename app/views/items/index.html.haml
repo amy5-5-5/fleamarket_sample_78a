@@ -18,7 +18,9 @@
           ブランド   
       .listsRight1
         .listsRight__item--login1
-          - if current_user 
+          - if current_user
+            = link_to user_path(current_user.id), class: "headerlink4" do
+              マイページ
             = link_to users_log_out_path, class: "headerlink4" do
               ログアウト
           - else
