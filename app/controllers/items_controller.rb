@@ -9,6 +9,9 @@ class ItemsController < ApplicationController
   def new
     @item = Item.new
     @item.images.new
+    #セレクトボックスの初期値設定
+    @category_parent_array = ["---"]
+    #データベースから、親カテゴリーのみ抽出し、配列化
     @category_parent_array = Category.where(ancestry: nil)
   end
 

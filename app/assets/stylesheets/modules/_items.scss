@@ -222,6 +222,35 @@
     .select4 {
       width: 100%;
     }
+    //カテゴリ機能実装
+    #parent_category{
+      color:black;
+      margin-bottom: 10px;
+      font-size: 16px;
+      padding: 0 56px 0 16px;
+      width:620px;
+      height:48px;
+    }
+    #child_category{
+      color:black;
+      margin-bottom: 10px;
+      font-size: 16px;
+      padding: 0 56px 0 16px;
+      width:620px;
+      height:48px;
+    }
+    #grandchild_category{
+      color:black;
+      margin-bottom: 10px;
+      font-size: 16px;
+      padding: 0 56px 0 16px;
+      width:620px;
+      height:48px;
+    }
+
+
+
+
     .priceArea4 {
       display: flex;
       justify-content: space-between;

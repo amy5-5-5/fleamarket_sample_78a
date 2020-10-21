@@ -1,8 +1,0 @@
-  .append__category
-      .category
-        .form__label
-          .lavel__name 
-            カテゴリー
-          .lavel__Required
-            [必須]
-        =f.collection_select :category_id, @category_parent_array, :id, :name,{ include_blank: "選択してください"},class:"serect_field"
