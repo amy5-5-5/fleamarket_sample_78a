@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     post 'addresses', to: 'users/registrations#create_address'
   end
   root 'items#index'
-
+  get 'items/purchase' => "items#purchase"
   get 'users/show' => 'users#show'
   get 'users/log-out' => 'users#logout'
   get 'users/creditcard' => 'users#creditcard'
@@ -30,5 +30,5 @@ Rails.application.routes.draw do
       post 'delete', to: 'card#delete'
     end
   end
-  
+
 end
