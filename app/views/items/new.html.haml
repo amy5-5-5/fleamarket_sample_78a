@@ -37,50 +37,47 @@
         %span.required4 必須
       = f.text_area :text, rows: "7", class: "itemInput4 textarea4", placeholder: "商品の説明（色、素材、重さ、注意点など）"
     .ItemForm4__itemDetails4.borderbottom4
-      -#カテゴリ機能実装
-      = form_with(model: @item, local: true) do |form|
-        .exhibitionPage__main
-          .exhibitionPage__main__contents
-            .exhibitionPage__main__contents__detail__title
-              %p.headline4 商品の詳細
-            .exhibitionPage__main__contents__detail__category
-              .exhibitionPage__main__contents__detail__category__title
-                .labelArea4
-                  %label.label4 カテゴリー
-                  %span.required4 必須
-                .exhibitionPage__main__contents__detail__category__choose
-                  = f.collection_select :category_id, Category.where(ancestry: nil), :id, :name, {prompt: '---'}, {id: 'parent_category'}
-
+      .exhibitionPage__main
+        .exhibitionPage__main__contents
+          .exhibitionPage__main__contents__detail__title
+            %p.headline4 商品の詳細
+          .exhibitionPage__main__contents__detail__category
+            .exhibitionPage__main__contents__detail__category__title
+              .labelArea4
+                %label.label4 カテゴリー
+                %span.required4 必須
+            .exhibitionPage__main__contents__detail__category__choose
+              = f.collection_select :category_id, Category.where(ancestry: nil), :id, :name,{include_blank: "選択してください"} , {id: 'parent_category'}
+            .labelArea4
+              %p.label4 ブランド
+              %span.any4 任意
+            = f.text_field :brand, class: "itemInput4 lineInput4 input4", placeholder: "例）シャネル"
+            .labelArea4
+              %p.label4 商品の状態
+              %span.required4 必須
+            = f.collection_select :condition_id, Condition.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput4 lineInput4 select4"}
+    .ItemForm4__delivery4.borderbottom4
+      %p.headline4 配送について
       .labelArea4
-        %p.label4 ブランド
-        %span.any4 任意
-      = f.text_field :brand, class: "itemInput4 lineInput4 input4", placeholder: "例）シャネル"
-      .labelArea4
-        %p.label4 商品の状態
+        %p.label4 配送料の負担
         %span.required4 必須
-      = f.collection_select :condition_id, Condition.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput4 lineInput4 select4"}
-      .ItemForm4__delivery4.borderbottom4
-        %p.headline4 配送について
+      = f.collection_select :burden_id, Burden.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput4 lineInput4 select4"}
+      .labelArea4
+        %p.label4 発送元の地域
+        %span.required4 必須
+      = f.collection_select :area_id, Area.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput4 lineInput4 select4"}
+      .labelArea4
+        %p.label4 発送までの日数
+        %span.required4 必須
+      = f.collection_select :shipping_date_id, ShippingDate.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput4 lineInput4 select4"}
+    .ItemForm4__price4.borderbottom4
+      %p.headline4 価格（¥300〜9,999,999）
+      .priceArea4
         .labelArea4
-          %p.label4 配送料の負担
+          %p.label4 販売価格
           %span.required4 必須
-        = f.collection_select :burden_id, Burden.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput4 lineInput4 select4"}
-        .labelArea4
-          %p.label4 発送元の地域
-          %span.required4 必須
-        = f.collection_select :area_id, Area.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput4 lineInput4 select4"}
-        .labelArea4
-          %p.label4 発送までの日数
-          %span.required4 必須
-        = f.collection_select :shipping_date_id, ShippingDate.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput4 lineInput4 select4"}
-      .ItemForm4__price4.borderbottom4
-        %p.headline4 価格（¥300〜9,999,999）
-        .priceArea4
-          .labelArea4
-            %p.label4 販売価格
-            %span.required4 必須
-          .priceArea4__input4
-            %span.enmark4 ¥
-            = f.number_field :price, class: "lineInput4 priceInput4 input4", placeholder: "0"
+        .priceArea4__input4
+          %span.enmark4 ¥
+          = f.number_field :price, class: "lineInput4 priceInput4 input4", placeholder: "0"
     .ItemForm4__submit4
       = f.submit '出品する', class: "exhibitionBtn4"

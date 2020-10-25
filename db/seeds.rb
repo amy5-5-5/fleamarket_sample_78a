@@ -1,4 +1,3 @@
-#カテゴリ機能
 require "csv"
 
 CSV.foreach('db/category.csv') do |row|
