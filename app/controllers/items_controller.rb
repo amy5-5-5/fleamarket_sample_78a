@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :set_cart, only:[:purchase, :pay, :destroy, :show, :edit, :update]
 
   def index
     @mens_items = Item.where(category_id:"2").includes(:user)
@@ -10,7 +11,7 @@ class ItemsController < ApplicationController
       @item = Item.find(params[:id])
       redirect_to new_card_path
     end
-    @item = Item.find(params[:id])
+    
     
   end
 
@@ -31,15 +32,15 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
+
   end
 
   def edit
-    @item = Item.find(params[:id])
+
   end
 
   def update
-    @item = Item.find(params[:id])
+
     if @item.update(item_params)
       redirect_to root_path
     else
@@ -48,7 +49,6 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item = Item.find(params[:id])
     if @item.destroy
        redirect_to root_path
     else
@@ -57,8 +57,7 @@ class ItemsController < ApplicationController
   end
 
   def pay
-   
-    @item = Item.find(params[:id])
+
     if current_user.card
     @card = Card.find_by(user_id: current_user.id)
     # = link_to '商品ページに戻る', item_path
@@ -78,5 +77,8 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:name, :text, :condition_id, :category_id, :burden_id, :area_id, :shipping_date_id, :price, :brand, images_attributes: [:src, :_destroy, :id]).merge(user_id: current_user.id)
   end
 
+  def set_cart
+    @item = Item.find(params[:id])
+  end
 
 end
