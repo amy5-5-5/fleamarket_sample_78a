@@ -81,4 +81,14 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+
+  protected
+
+  def nonlogin_user
+    unless current_user
+      redirect_to root_path
+    end
+  end
+
+
 end
