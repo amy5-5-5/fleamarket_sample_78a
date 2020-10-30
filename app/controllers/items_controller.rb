@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_cart, only:[:purchase, :pay, :destroy, :show, :edit, :update]
+  before_action :set_item, only:[:purchase, :pay, :destroy, :show, :edit, :update]
 
   def index
     @mens_items = Item.where(category_id:"2").includes(:user)
@@ -7,12 +7,7 @@ class ItemsController < ApplicationController
   end
 
   def purchase
-    if current_user.card == nil
-      @item = Item.find(params[:id])
-      redirect_to new_card_path
-    end
-    
-    
+    redirect_to new_card_path if current_user.card == nil
   end
 
   def new
@@ -77,7 +72,7 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:name, :text, :condition_id, :category_id, :burden_id, :area_id, :shipping_date_id, :price, :brand, images_attributes: [:src, :_destroy, :id]).merge(user_id: current_user.id)
   end
 
-  def set_cart
+  def set_item
     @item = Item.find(params[:id])
   end
 
