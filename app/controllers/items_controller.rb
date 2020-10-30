@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :nonlogin_user, only: [:purchase, :new, :create, :edit, :update, :destroy]
+  before_action :set_item, only:[:purchase, :pay, :destroy, :show, :edit, :update]
 
   def index
     @mens_items = Item.where(category_id:"2").includes(:user)
@@ -7,6 +7,7 @@ class ItemsController < ApplicationController
   end
 
   def purchase
+    redirect_to new_card_path if current_user.card == nil
   end
 
   def new
@@ -26,15 +27,15 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
+
   end
 
   def edit
-    @item = Item.find(params[:id])
+
   end
 
   def update
-    @item = Item.find(params[:id])
+
     if @item.update(item_params)
       redirect_to root_path
     else
@@ -43,12 +44,26 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item = Item.find(params[:id])
     if @item.destroy
        redirect_to root_path
     else
       render :show
     end
+  end
+
+  def pay
+
+    if current_user.card
+    @card = Card.find_by(user_id: current_user.id)
+    # = link_to '商品ページに戻る', item_path
+    Payjp.api_key = Rails.application.credentials[:PAYJP_PRIVATE_KEY]
+    Payjp::Charge.create(
+      :amount => @item.price, #支払金額を引っ張ってくる
+      :customer => @card.customer_id,  #顧客ID
+      :currency => 'jpy',              #日本円
+    )
+    end
+    redirect_to root_path #完了画面に移動
   end
 
   private
@@ -57,6 +72,11 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:name, :text, :condition_id, :category_id, :burden_id, :area_id, :shipping_date_id, :price, :brand, images_attributes: [:src, :_destroy, :id]).merge(user_id: current_user.id)
   end
 
+  def set_item
+    @item = Item.find(params[:id])
+  end
+
+
   protected
 
   def nonlogin_user
@@ -64,5 +84,6 @@ class ItemsController < ApplicationController
       redirect_to root_path
     end
   end
+
 
 end

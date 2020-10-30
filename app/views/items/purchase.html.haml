@@ -12,10 +12,10 @@
     .Box__Component1
       .ProductInfo1
         .ProductInfo__Head1
-          = image_tag src="huku.png", width: "56px", height:"56px"
+          = image_tag @item.images[0].src.url, width: "56px", height:"56px"
           .ProductInfo__Body1
             .ProductInfo__Title1
-              7分袖カットソー
+              = @item.name
             .ProductInfo__Bottom1
               .ProductInfo__FreeShipping1
                 送料無料
@@ -23,7 +23,7 @@
                 .Typography__Componenta1
                   販売価格
                 .Typography__Componentb1
-                  1,180
+                  = @item.price
     .OrderCoupon__Component1
       .ul1
         .li1
@@ -70,9 +70,17 @@
                 .OrderCreditCard__Last4Text-sc-1t82in-8
                   .OrderCreditCard__Icon-sc-1t82in-5
                   .OrderCreditCard__Icon-sc-1t82in-6
-                    下４桁 1111
-                .OrderCreditCard__TotalPayment-sc-1t82in-9
-                  795円
+                    - if @default_card_information.blank?
+                      %br /
+                    - else
+                      = "**** **** **** " + "#{@default_card_information.last4}"
+                      %br
+                      - exp_month = @default_card_information.exp_month.to_s
+                      - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+                      = "有効期限 " + exp_month + " / " + exp_year
+                      %br
+                  .OrderCreditCard__TotalPayment-sc-1t82in-9
+                    = "#{@item.price}"
             .OrderCreditCard__SecurityCode-sc-1t82in-16
               .HelpText__Component-sc-10776i7-0
                 .HelpText__Icon-sc-10776i7-1
@@ -119,7 +127,7 @@
       .OrderFooter__ButtonArea-dku7al-3
         .Button__Component-sc-1735cvq-0
           .Typography__Component-sc-10fxrsq-6
-            購入を確定する
+            = link_to '購入を確定する', "/items/#{@item.id}/pay"
       .OrderFooter__Location-dku7al-4
         .Typography__Component-sc-10fxrsq-7
           加盟店所在地：日本
@@ -127,4 +135,5 @@
           Merchant Location：JAPAN
       .OrderFooter__PageBack-dku7al-5
         .Typography__Component-sc-10fxrsq-8
-          商品ページに戻る
+          = link_to '商品ページに戻る', item_path
+           

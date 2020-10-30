@@ -84,6 +84,7 @@
                   %td 
                     = @item.shipping_date.name
           .ItemEditBtn4
+            = link_to '商品を購入する', purchase_item_path(params[:id]), class: "ItemEditBtn4__editbtn4"
             = link_to '商品情報を編集する', edit_item_path(params[:id]), class: "ItemEditBtn4__editbtn4"
             = link_to '商品情報を削除する', item_path(params[:id]), method: "DELETE", class: "ItemEditBtn4__deletebtn4"
           .optionalArea2
