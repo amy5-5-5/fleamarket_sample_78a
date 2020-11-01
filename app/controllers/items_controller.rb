@@ -68,7 +68,6 @@ class ItemsController < ApplicationController
   end
 
   def pay
-
     if current_user.card
     @card = Card.find_by(user_id: current_user.id)
     # = link_to '商品ページに戻る', item_path
@@ -83,7 +82,6 @@ class ItemsController < ApplicationController
   end
 
   private
-  
   def item_params
     params.require(:item).permit(:name, :text, :condition_id, :category_id, :burden_id, :area_id, :shipping_date_id, :price, :brand, images_attributes: [:src, :_destroy, :id])
   end
@@ -93,11 +91,9 @@ class ItemsController < ApplicationController
   end
 
   protected
-  
   def nonlogin_user
     unless current_user
       redirect_to root_path
     end
   end
-  
 end
