@@ -24,7 +24,6 @@ class UsersController < ApplicationController
     end
   end
 
-  #以下、自信ないです
   private
   def user_params
     params.require(:user).permit(:name, :email)

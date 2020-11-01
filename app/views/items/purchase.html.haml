@@ -1,0 +1,139 @@
+.pcHeader1
+  .pcHeader1__headerInner1
+    .pcHeader1__mainHeader1
+      .pcHeader1__FURIMA_icon1
+        = link_to root_path,class: "serchbtn" do
+          = image_tag "/assets/icon.png", class: "image"
+.Main__Component-sc-121eqei1
+  .Main__Component-sc-121eqei1__ComponentOrder1
+    .Main__PageTitle1
+      .PageTitle1
+        購入手続き
+    .Box__Component1
+      .ProductInfo1
+        .ProductInfo__Head1
+          = image_tag @item.images[0].src.url, width: "56px", height:"56px"
+          .ProductInfo__Body1
+            .ProductInfo__Title1
+              = @item.name
+            .ProductInfo__Bottom1
+              .ProductInfo__FreeShipping1
+                送料無料
+              .ProductInfo__Price1
+                .Typography__Componenta1
+                  販売価格
+                .Typography__Componentb1
+                  = @item.price
+    .OrderCoupon__Component1
+      .ul1
+        .li1
+          .OrderCoupon__Inner1
+            .Typography__Componentc1
+              クーポンの利用
+            .Typography__Componentd1
+              お使いいただけるクーポンはありません
+      .ull1
+        .OrderCoupon__Help1
+          %form.form
+          = icon('fas', 'question-circle', class: 'icon')
+          .HelpText__Component1
+            クーポンが表示されない場合
+    .OrderPayment__Component11
+      .OrderPayment__Component11__OrderBody1
+        .OrderPayment__Wrap1
+          .OrderPayment__Title1
+            .Typography__Component1
+              PayPayでの支払い
+            .OrderPayment__BalanceText1
+              現在の残高：
+              .OrderPayment__BalanceText11
+                5円
+          .OrderPayment__Body1
+            .OrderPayment__TotalPayment1
+              .OrderPayment__PayPayPaymentInput1
+                %input.InputText__Component-glbpa7-01      
+                  円
+        .OrderPayment__Charge1
+          .OrderPayment__Charge1__ChargeText-n2xk1e-101
+  
+          .Typography__Component-sc-10fxrsq-01
+            残高にチャージ
+        .OrderCreditCard__Component-sc-1t82in-0
+          .OrderCreditCard__Expand-sc-1t82in-2
+            .OrderCreditCard__ExpandHead-sc-1t82in-3
+              .OrderCreditCard__Title-sc-1t82in-6
+                .Typography__Component-sc-10fxrsq-0
+                  クレジットカード 
+                  .OrderCreditCard__SubText-sc-1t82in-10
+                    一括払い 
+              .OrderCreditCard__Body-sc-1t82in-7
+                .OrderCreditCard__Last4Text-sc-1t82in-8
+                  .OrderCreditCard__Icon-sc-1t82in-5
+                  .OrderCreditCard__Icon-sc-1t82in-6
+                    - if @default_card_information.blank?
+                      %br /
+                    - else
+                      = "**** **** **** " + "#{@default_card_information.last4}"
+                      %br
+                      - exp_month = @default_card_information.exp_month.to_s
+                      - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+                      = "有効期限 " + exp_month + " / " + exp_year
+                      %br
+                  .OrderCreditCard__TotalPayment-sc-1t82in-9
+                    = "#{@item.price}"
+            .OrderCreditCard__SecurityCode-sc-1t82in-16
+              .HelpText__Component-sc-10776i7-0
+                .HelpText__Icon-sc-10776i7-1
+                  %form.form
+                  = icon('fas', 'question-circle', class: 'icon')
+
+                  .Typography__Component-sc-10fxrsq-0
+                    セキュリティコード
+              .OrderCreditCard__SecurityCodeInput-sc-1t82in-17
+                .InputText__Component-glbpa7-0
+                  123
+    .OrderAddress__Component-fqn5d5-0
+      .OrderAddress__Body-fqn5d5-1
+        .OrderAddress__Wrap-fqn5d5-2
+          .OrderAddress__Left-fqn5d5-3
+            .Typography__Component-sc-10fxrsq-0
+              お届け先
+            .Typography__Component-sc-10fxrsq-1
+              大塚 おおつか
+            .Typography__Component-sc-10fxrsq-3
+              〒111-1111
+            .Typography__Component-sc-10fxrsq-4
+              大阪府大阪市浪速区111
+          .OrderAddress__Right-fqn5d5-4
+            .Button__Component-sc-1735cvq-0
+              .Typography__Component-sc-10fxrsq-5
+                編集する
+        .Typography__Component-sc-10fxrsq-6
+          ※ 全商品匿名配送のため、住所・氏名は出品者に表示されません
+    .OrderFooter__Component-dku7al-0
+      .OrderFooter__Note-dku7al-1
+        .OrderFooter__Note-dku7al-1__Component-sc-10fxrsq-0
+          お支払いはYahoo!かんたん決済を通じて行われます
+        .OrderFooter__Note-dku7al-1__Component-sc-10fxrsq-1
+          購入を確定すると以下の利用規約と情報提供に同意したものとみなします
+        .OrderFooter__Note-dku7al-1__Component-sc-10fxrsq-2
+          ・PayPayフリマガイドライン / Yahoo!かんたん決済利用規約
+        .OrderFooter__Note-dku7al-1__Component-sc-10fxrsq-3
+          ・お届け先に指定した氏名・住所・電話番号が配送サービス提供の目的で配送業者へ提供されます
+        .OrderFooter__Note-dku7al-1__Component-sc-10fxrsq-4        
+          PayPay残高のチャージは、PayPay株式会社のサービスを通じて行われます
+        .OrderFooter__Note-dku7al-1__Component-sc-10fxrsq-5
+          （PayPay利用規約）
+      .OrderFooter__ButtonArea-dku7al-3
+        .Button__Component-sc-1735cvq-0
+          .Typography__Component-sc-10fxrsq-6
+            = link_to '購入を確定する', "/items/#{@item.id}/pay"
+      .OrderFooter__Location-dku7al-4
+        .Typography__Component-sc-10fxrsq-7
+          加盟店所在地：日本
+          <br>
+          Merchant Location：JAPAN
+      .OrderFooter__PageBack-dku7al-5
+        .Typography__Component-sc-10fxrsq-8
+          = link_to '商品ページに戻る', item_path
+           

@@ -1,9 +1,13 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only:[:purchase, :pay, :destroy, :show, :edit, :update]
 
-  #商品一覧表示
   def index
-    @mens_items = Item.where(category_id:"2")
-    @chanel_brands = Item.where(brand:"シャネル")
+    @mens_items = Item.where(category_id:"2").includes(:user)
+    @chanel_brands = Item.where(brand:"シャネル").includes(:user)
+  end
+
+  def purchase
+    redirect_to new_card_path if current_user.card == nil
   end
 
   def new
@@ -14,11 +18,11 @@ class ItemsController < ApplicationController
   end
 
   def create
-    # ログインユーザーのIDを自動保存する処理が必要（ユーザー機能ができてから）
     @item = Item.new(item_params)
     if @item.save
       redirect_to root_path
     else
+      @item.images = []
       @item.images.new
       render :new
     end
@@ -42,7 +46,7 @@ class ItemsController < ApplicationController
   end
 
   def update
-    @item = Item.find(params[:id])
+
     if @item.update(item_params)
       redirect_to root_path
     else
@@ -51,7 +55,6 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item = Item.find(params[:id])
     if @item.destroy
        redirect_to root_path
     else
@@ -83,7 +86,11 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:name, :text, :condition_id, :category_id, :burden_id, :area_id, :shipping_date_id, :price, :brand, images_attributes: [:src, :_destroy, :id])
+    params.require(:item).permit(:name, :text, :condition_id, :category_id, :burden_id, :area_id, :shipping_date_id, :price, :brand, images_attributes: [:src, :_destroy, :id]).merge(user_id: current_user.id)
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 
   def set_category  
@@ -91,6 +98,7 @@ class ItemsController < ApplicationController
   end
 
   protected
+ 
   def nonlogin_user
     unless current_user
       redirect_to root_path

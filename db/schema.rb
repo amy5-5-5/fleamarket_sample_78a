@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2020_10_12_102341) do
     t.string "card_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-
+    
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "ancestry"
@@ -58,9 +58,17 @@ ActiveRecord::Schema.define(version: 2020_10_12_102341) do
     t.integer "area_id"
     t.integer "shipping_date_id"
     t.string "brand"
+    t.bigint "user_id"
+    t.integer "buyer_id"
+    t.index ["user_id"], name: "index_items_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "nickname", null: false
+    t.string "family_name", null: false
+    t.string "family_name_furigana", null: false
+    t.string "first_name", null: false
+    t.string "first_name_furigana", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -72,5 +80,7 @@ ActiveRecord::Schema.define(version: 2020_10_12_102341) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "addresses", "users"
   add_foreign_key "images", "items"
+  add_foreign_key "items", "users"
 end
