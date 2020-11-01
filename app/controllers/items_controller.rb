@@ -3,8 +3,8 @@ class ItemsController < ApplicationController
 
   def index
     num = 51..57
-    @mens_items = Item.where(category_id: num).includes(:user)
-    @chanel_brands = Item.where(brand:"シャネル").includes(:user)
+    @mens_items = Item.where(category_id: num, buyer_id: nil).includes(:user)
+    @chanel_brands = Item.where(brand:"シャネル", buyer_id: nil).includes(:user)
   end
 
   def purchase
