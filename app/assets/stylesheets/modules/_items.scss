@@ -802,6 +802,48 @@
                 }
               }
             }
+            .ItemEditBtn4 {
+              display: flex;
+              flex-direction: column;
+              text-align: center;
+              margin: 35px 0;
+              &__editbtn4 {
+                display: inline-block;
+                margin: 10px auto;
+                width: 60%;
+                text-decoration: none;
+                background-color:#3CCACE;
+                border-radius: 4px;
+                padding: 10px 20px;
+                color: white;
+              }
+              &__deletebtn4 {
+                display: inline-block;
+                margin: 10px auto;
+                width: 60%;
+                text-decoration: none;
+                background-color: tomato;
+                border-radius: 4px;
+                padding: 10px 20px;
+                color: white;
+              }
+            } 
+            .ItemEditBtn2 {
+              display: flex;
+              flex-direction: column;
+              text-align: center;
+              margin: 35px 0;
+              &__buybtn2 {
+                display: inline-block;
+                margin: 10px auto;
+                width: 60%;
+                text-decoration: none;
+                background-color: tomato;
+                border-radius: 4px;
+                padding: 10px 20px;
+                color: white;
+              }
+            }   
             .optionalArea2 {
               display: flex;
               justify-content: space-between;
@@ -831,32 +873,6 @@
                   }
                 }   
               }       
-            }
-            .ItemEditBtn4 {
-              display: flex;
-              flex-direction: column;
-              text-align: center;
-              margin: 35px 0;
-              &__editbtn4 {
-                display: inline-block;
-                margin: 10px auto;
-                width: 60%;
-                text-decoration: none;
-                background-color:#3CCACE;
-                border-radius: 4px;
-                padding: 10px 20px;
-                color: white;
-              }
-              &__deletebtn4 {
-                display: inline-block;
-                margin: 10px auto;
-                width: 60%;
-                text-decoration: none;
-                background-color: tomato;
-                border-radius: 4px;
-                padding: 10px 20px;
-                color: white;
-              }
             }
           }
         } 
