@@ -67,6 +67,21 @@ class ItemsController < ApplicationController
     @category_grandchildren = Category.find("#{params[:child_id]}").children
   end
 
+  def pay
+
+    if current_user.card
+    @card = Card.find_by(user_id: current_user.id)
+    # = link_to '商品ページに戻る', item_path
+    Payjp.api_key = Rails.application.credentials[:PAYJP_PRIVATE_KEY]
+    Payjp::Charge.create(
+      :amount => @item.price, #支払金額を引っ張ってくる
+      :customer => @card.customer_id,  #顧客ID
+      :currency => 'jpy',              #日本円
+    )
+    end
+    redirect_to root_path #完了画面に移動
+  end
+
   private
   
   def item_params
@@ -75,6 +90,14 @@ class ItemsController < ApplicationController
 
   def set_category  
     @category_parent_array = Category.where(ancestry: nil)
+  end
+
+  protected
+  
+  def nonlogin_user
+    unless current_user
+      redirect_to root_path
+    end
   end
   
 end
