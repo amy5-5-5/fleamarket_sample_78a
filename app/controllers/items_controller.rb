@@ -81,13 +81,14 @@ class ItemsController < ApplicationController
       :customer => @card.customer_id,  #顧客ID
       :currency => 'jpy',              #日本円
     )
+    @item.update(buyer_id: current_user.id)
     end
     redirect_to root_path #完了画面に移動
   end
 
   private
   def item_params
-    params.require(:item).permit(:name, :text, :condition_id, :category_id, :burden_id, :area_id, :shipping_date_id, :price, :brand, images_attributes: [:src, :_destroy, :id]).merge(user_id: current_user.id, buyer_id: current_user.id)
+    params.require(:item).permit(:name, :text, :condition_id, :category_id, :burden_id, :area_id, :shipping_date_id, :price, :brand, images_attributes: [:src, :_destroy, :id]).merge(user_id: current_user.id)
   end
 
   def set_item
