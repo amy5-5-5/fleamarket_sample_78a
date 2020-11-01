@@ -34,6 +34,11 @@ class ItemsController < ApplicationController
 
   def edit
     @item = Item.find(params[:id])
+    @grandchild_category = @item.category
+    @child_category = @grandchild_category.parent 
+    @category_parent = @child_category.parent
+    @category_children = @item.category.parent.parent.children
+    @category_grandchildren = @item.category.parent.children
   end
 
   def update
@@ -68,4 +73,8 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:name, :text, :condition_id, :category_id, :burden_id, :area_id, :shipping_date_id, :price, :brand, images_attributes: [:src, :_destroy, :id])
   end
 
+  def set_category  
+    @category_parent_array = Category.where(ancestry: nil)
+  end
+  
 end
