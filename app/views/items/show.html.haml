@@ -89,8 +89,8 @@
             .ItemEditBtn4
               = link_to '商品情報を編集する', edit_item_path(params[:id]), class: "ItemEditBtn4__editbtn4"
               = link_to '商品情報を削除する', item_path(params[:id]), method: "DELETE", class: "ItemEditBtn4__deletebtn4"
-          -# - elsif @item.buyer_id 
-            -# 売却済み
+          - elsif @item.buyer_id 
+            売却済み
           - else         
             .ItemEditBtn2   
               = link_to '購入画面に進む', '#' ,class: "ItemEditBtn2__buybtn2"
