@@ -53,7 +53,7 @@ $(document).on('turbolinks:load', ()=> {
   // 削除ボタンが押された時の処理
   $('#previews').on('click', '.js-remove4', function() {
     const targetIndex = $(this).data('index');
-    const hiddenCheck = $(`input[data-index="${targetIndex}"].hidden-destroy4`);
+    const hiddenCheck = $(`input[data-index="${targetIndex}"]`);
     if (hiddenCheck.length >= 1) {
       hiddenCheck.prop('checked', true);
       $(`div[data-index="${targetIndex}"]`).hide();
