@@ -57,9 +57,10 @@
       = image_tag asset_path("kuro.png"), class: "image"
     .p
       © FURIMA
-%li
-  = link_to new_item_path do
-    .purchaseBtn
-      .purchaseBtn__text
-        出品する
-        = image_tag src="icon_camera.png", width: "54px", height:"54px" 
+- if current_user
+  %li
+    = link_to new_item_path do
+      .purchaseBtn
+        .purchaseBtn__text
+          出品する
+          = image_tag src="icon_camera.png", width: "54px", height:"54px" 
