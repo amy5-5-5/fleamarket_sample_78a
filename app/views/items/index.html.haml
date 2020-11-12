@@ -132,7 +132,7 @@
         .title1 
           メンズ新着商品
       .productLists1
-        - @mens_items.each do |item|
+        - @items.each do |item|
           .productList1
             .productList--img1
               = link_to item_path(item.id) do
@@ -158,7 +158,7 @@
         .title1
           シャネル新着商品
       .productLists1
-        - @chanel_brands.each do |item|
+        - @items.each do |item|
           .productList1
             = link_to item_path(item.id) do
               .productList--img1

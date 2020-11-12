@@ -2,9 +2,7 @@ class ItemsController < ApplicationController
   before_action :set_item, only:[:purchase, :pay, :destroy, :show, :edit, :update]
 
   def index
-    num = 51..57
-    @mens_items = Item.where(category_id: num, buyer_id: nil).includes(:user)
-    @chanel_brands = Item.where(brand:"シャネル", buyer_id: nil).includes(:user)
+    @items = Item.all.includes(:user)
   end
 
   def purchase
