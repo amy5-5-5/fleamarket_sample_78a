@@ -27,6 +27,9 @@
         .listsRight__item--new1
           -#  = link_to 
           新規会員登録
+        .logout
+          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+        
 .main1
   .main1__mainVisual1
     .content1

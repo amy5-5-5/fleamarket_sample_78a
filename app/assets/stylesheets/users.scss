@@ -305,7 +305,16 @@ body {
       font-size: 16px;
       box-sizing: border-box; 
     }
+
   }
+
+  &--user_birth_date_1i select {
+    width: 76px;
+    height: 48px;
+    font-size: 100%;
+    margin-top: 10px; 
+  }
+  
   &__info5{
     margin-top: 8px;
     color: #888;

@@ -7,12 +7,29 @@ Rails.application.routes.draw do
     post 'addresses', to: 'users/registrations#create_address'
   end
   root 'items#index'
-  #ユーザー管理、マイページ実装用（onlyで必要な機能だけ！
-
+  get 'items/purchase' => "items#purchase"
   get 'users/show' => 'users#show'
   get 'users/log-out' => 'users#logout'
   get 'users/creditcard' => 'users#creditcard'
   resources :users
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :items
+
+  resources :items do
+    member do
+      get :purchase
+      get :pay
+    end
+    
+    collection do
+      get 'get_category_children', defaults: { fomat: 'json'}
+      get 'get_category_grandchildren', defaults: { fomat: 'json'}
+    end
+  end
+
+  resources :cards, only: [:new, :show, :create, :destroy] do
+    collection do
+      # post 'show', to: 'cards#show'
+      # post 'pay', to: 'cards#pay'
+      # post 'delete', to: 'cards#delete'
+    end
+  end
 end

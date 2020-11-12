@@ -13,6 +13,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
+    params[:user][:birthday] = params[:birthday]
     @user = User.new(sign_up_params)
     unless @user.valid?
       flash.now[:alert] = @user.errors.full_messages
@@ -45,7 +46,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def address_params
-    params.require(:address).permit(:address,:zipcode,:prefecture,:city,:street)
+    params.require(:address).permit(:address,:zip_code,:prefecture,:city,:street)
   end
   #   super
   # end
@@ -96,4 +97,3 @@ end
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
-
