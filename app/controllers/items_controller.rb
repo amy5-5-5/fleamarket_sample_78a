@@ -50,6 +50,11 @@ class ItemsController < ApplicationController
       redirect_to root_path
     else
       @item.images = Item.find(params[:id]).images
+      @grandchild_category = @item.category
+      @child_category = @grandchild_category.parent 
+      @category_parent = @child_category.parent
+      @category_children = @item.category.parent.parent.children
+      @category_grandchildren = @item.category.parent.children
       render :edit
     end
   end
