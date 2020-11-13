@@ -1,7 +1,7 @@
 .single-container5
   %header.single-header5
     %h1.single-header5__logo5
-      = link_to "#" do
+      = link_to root_path do
         = image_tag 'logo.png', class: 'FurimaLogo5'
     %nav.single-header5__progress5
       %ol
@@ -28,7 +28,6 @@
 
             会員登録が完了しました。
           .btn-start5
-            FURIMAを始める
-          //%button{type:"button",class: "btn-start5"}//
-            
+            = link_to root_path, class: "white4" do
+              FURIMAを始める
   = render "registration_footer"

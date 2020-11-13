@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_14_012256) do
+ActiveRecord::Schema.define(version: 2020_11_13_134615) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "post_code"
+    t.integer "zip_code"
     t.string "prefecture"
     t.string "city"
     t.text "street"
@@ -59,6 +59,10 @@ ActiveRecord::Schema.define(version: 2020_09_14_012256) do
     t.date "birth_date", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "mailing_name"
+    t.string "mailing_name_kana"
+    t.string "mailing_first_name"
+    t.string "mailing_first_name_kana"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

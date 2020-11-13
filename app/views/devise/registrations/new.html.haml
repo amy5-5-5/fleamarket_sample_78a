@@ -62,10 +62,22 @@
             = f.text_field :family_name_furigana, {placeholder:"例) ヤマダ",class:'form-group5__input5--first--half5'}
             = f.text_field :first_name_furigana, {placeholder:"例) アヤ",class:'form-group5__input5--secound--half5'}
           .form-group5
+            = f.label :"送付先氏名(全角)"
+            %span.form-group5__require5 必須
+          .form-group5__name5
+            = f.text_field :family_name, {placeholder:"例) 山田",class:'form-group5__input5--first--half5'}
+            = f.text_field :first_name, {placeholder:"例) 彩",class:'form-group5__input5--secound--half5'}
+          .form-group5
+            = f.label :"送付先氏名カナ(全角)"
+            %span.form-group5__require5 必須
+          .form-group5__kana5
+            = f.text_field :family_name_furigana, {placeholder:"例) ヤマダ",class:'form-group5__input5--first--half5'}
+            = f.text_field :first_name_furigana, {placeholder:"例) アヤ",class:'form-group5__input5--secound--half5'}
+          .form-group5
             = f.label :"生年月日"
             %span.form-group5__require5 必須
-          .form-group__birthdate5
-            = f.date_select :birth_date, start_year: 1930, end_year: (Time.now.year - 10), default: Date.new(1989, 1, 1), class: 'user_birth_date_1i'
+          .form-group5__birthday5
+            = f.date_select :birth_date, start_year: 1930, end_year: (Time.now.year - 10), default: Date.new(1989, 1, 1),class:'form-group5__input5--birth'
           .form-group5
             = f.submit '次へ', class: "btn-default5 btn-blue5", url: "address_path"
   = render "registration_footer"

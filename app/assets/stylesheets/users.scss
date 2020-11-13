@@ -254,7 +254,15 @@ body {
   & label {
     font-weight: 600;
   }
-
+  &__birthday5{
+    select {
+      width: 76px;
+      height: 48px;
+      font-size: 100%;
+      margin-top: 10px;
+    }
+  }
+  
 /* 必須 */ 
   &__require5{
     background: #ea352d;
@@ -306,15 +314,9 @@ body {
       box-sizing: border-box; 
     }
 
+    
   }
-
-  &--user_birth_date_1i select {
-    width: 76px;
-    height: 48px;
-    font-size: 100%;
-    margin-top: 10px; 
-  }
-  
+ 
   &__info5{
     margin-top: 8px;
     color: #888;
