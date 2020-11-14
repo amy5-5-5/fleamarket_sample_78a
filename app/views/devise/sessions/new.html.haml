@@ -7,7 +7,7 @@
     .login-panel5
       .login-no-account5
         %p.login-no-account5__top5 アカウントをお持ちでない方はこちら
-        =link_to new_user_registration_path, class: "btn-default login5" do 
+        = link_to new_user_registration_path, class: "btn-default login5" do
           新規会員登録 
       .login-form-inner5 
         = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|

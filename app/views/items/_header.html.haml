@@ -19,11 +19,13 @@
           ブランド   
       .listsRight1
         .listsRight__item--login1
-          -#  = link_to 
-          ログイン
+          - if current_user 
+            = link_to users_log_out_path, class: "headerlink4" do
+              ログアウト
+          - else
+            = link_to new_user_session_path, class: "headerlink4" do
+              ログイン
         .listsRight__item--new1
-          -#  = link_to 
-          新規会員登録
-
-        
-
+          - unless current_user
+            = link_to new_user_registration_path, class: "headerlink4" do
+              新規会員登録

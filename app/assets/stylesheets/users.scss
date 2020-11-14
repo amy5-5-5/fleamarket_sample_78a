@@ -98,121 +98,10 @@ body {
   }
 }
 
-/* ナビの棒線 */  
-/*.single-header5__progress5__status5::before {
-  right: 50%;
-  position: absolute;
-  bottom: 5px;
-  z-index: -1;
-  display: block;
-  content: '';
-  width: 114%;
-  height: 2px;
-  background: #ccc;
+.white4 {
+  color: white;
+  text-decoration: none;
 }
-
-.single-header5__progress5__status5::after {
-  left: 100%;
-  position: absolute;
-  bottom: 5px;
-  display: block;
-  content: '';
-  width: 100%;
-  height: 2px;
-  background: #ccc;
-}
-
-.single-header5__progress5__status--red5::after {
-  left: 50%;
-  position: absolute;
-  bottom: 5px;
-  display: block;
-  content: '';
-  width: 100%;
-  height: 2px;
-  background: #ccc;
-}
-.single-header5__progress5__status--red5::before {
-  right: 50%;
-  position: absolute;
-  bottom: 5px;
-  z-index: -1;
-  display: block;
-  content: '';
-  width: 150%;
-  height: 2px;
-  background: #ea352d;
-}
-
-.single-header5__progress5__status--red5::after {
-  right: 50%;
-  position: absolute;
-  bottom: 5px;
-  z-index: -1;
-  display: block;
-  content: '';
-  width: 150%;
-  height: 2px;
-  background: #ea352d;
-}
-
-
-#first ::before {
-  right: 50%;
-  position: absolute;
-  bottom: 5px;
-  z-index: -1;
-  display: block;
-  content: '';
-  width: 114%;
-  height: 2px;
-  background: #ccc;
-}
-#second ::before {
-  right: 50%;
-  position: absolute;
-  bottom: 5px;
-  z-index: -1;
-  display: block;
-  content: '';
-  width: 114%;
-  height: 2px;
-  background: #ea352d;
-}
-
-#long {
-  right: 100%;
-  position: absolute;
-  bottom: 5px;
-  z-index: -1;
-  display: block;
-  content: '';
-  width: 150%;
-  height: 2px;
-  background: #ea352d;
-}
-#first ::after {
-  left: 50%;
-  position: absolute;
-  bottom: 5px;
-  z-index: -1;
-  display: block;
-  content: '';
-  width: 100%;
-  height: 2px;
-  background: #f5f5f5;
-}
-#end ::after {
-  left: 50%;
-  position: absolute;
-  bottom: 5px;
-  z-index: -1;
-  display: block;
-  content: '';
-  width: 100%;
-  height: 2px;
-  background: #f5f5f5;
-} */
 
 /* メイン全体 */
 .single-main5{
@@ -424,6 +313,7 @@ body {
     text-align: center;
     a {
       display: block;
+      text-decoration: none;
       margin: 8px 0 0;
       border-radius: 4px;
       border: 1px solid #0099e8;
@@ -461,12 +351,11 @@ body {
   text-align: center;
   
   &__logo5 {
-    width: 80px;
     height: 65px;
-    margin: 40px auto 0;
+    margin: 10px auto;
+    text-align: center;
     .pic5{
-      width: 180%;
-      vertical-align: bottom;
+      width: 180px;
     }
   }
   &__content5{
@@ -835,7 +724,6 @@ body {
 }
 li{
   cursor: pointer;
-  text-decoration: underline;
   list-style: none;
   text-decoration: none;
 }

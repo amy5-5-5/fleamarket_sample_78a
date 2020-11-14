@@ -1,7 +1,3 @@
--# %h1 Items#index
--# %p Find me in app/views/items/index.html.erb
-
-
 .pcHeader1
   .pcHeader1__headerInner1
     .pcHeader1__mainHeader1
@@ -22,12 +18,18 @@
           ブランド   
       .listsRight1
         .listsRight__item--login1
-          -#  = link_to 
-          ログイン
+          - if current_user
+            = link_to user_path(current_user.id), class: "headerlink4" do
+              マイページ
+            = link_to users_log_out_path, class: "headerlink4" do
+              ログアウト
+          - else
+            = link_to new_user_session_path, class: "headerlink4" do
+              ログイン
         .listsRight__item--new1
-          -#  = link_to 
-          新規会員登録
-        
+          - unless current_user
+            = link_to new_user_registration_path, class: "headerlink4" do
+              新規会員登録
 .main1
   .main1__mainVisual1
     .content1
@@ -128,9 +130,9 @@
     .productBox1
       .productHead1
         .title1 
-          メンズ新着商品
+          全ての商品
       .productLists1
-        - @mens_items.each do |item|
+        - @items.each do |item|
           .productList1
             .productList--img1
               = link_to item_path(item.id) do
@@ -154,9 +156,9 @@
     .productBox1
       .productHead1
         .title1
-          シャネル新着商品
+          全ての商品
       .productLists1
-        - @chanel_brands.each do |item|
+        - @items.each do |item|
           .productList1
             = link_to item_path(item.id) do
               .productList--img1
@@ -233,9 +235,11 @@
       = image_tag asset_path("kuro.png"), class: "image"
     .p
       © FURIMA
-%li
-  = link_to new_item_path do
-    .purchaseBtn
-      .purchaseBtn__text
-        出品する
-        = image_tag src="icon_camera.png", width: "54px", height:"54px"
+- if current_user
+  %li
+    = link_to new_item_path do
+      .purchaseBtn
+        .purchaseBtn__text
+          出品する
+          = image_tag src="icon_camera.png", width: "54px", height:"54px"
+

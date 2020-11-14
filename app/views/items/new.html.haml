@@ -37,19 +37,25 @@
         %span.required4 必須
       = f.text_area :text, rows: "7", class: "itemInput4 textarea4", placeholder: "商品の説明（色、素材、重さ、注意点など）"
     .ItemForm4__itemDetails4.borderbottom4
-      %p.headline4 商品の詳細
-      .labelArea4
-        %p.label4 カテゴリー
-        %span.required4 必須
-      = f.collection_select :category_id, Category.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput4 lineInput4 select4"}
-      .labelArea4
-        %p.label4 ブランド
-        %span.any4 任意
-      = f.text_field :brand, class: "itemInput4 lineInput4 input4", placeholder: "例）シャネル"
-      .labelArea4
-        %p.label4 商品の状態
-        %span.required4 必須
-      = f.collection_select :condition_id, Condition.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput4 lineInput4 select4"}
+      .exhibitionPage__main
+        .exhibitionPage__main__contents
+          .exhibitionPage__main__contents__detail__title
+            %p.headline4 商品の詳細
+          .exhibitionPage__main__contents__detail__category
+            .exhibitionPage__main__contents__detail__category__title
+              .labelArea4
+                %label.label4 カテゴリー
+                %span.required4 必須
+            .exhibitionPage__main__contents__detail__category__choose
+              = f.collection_select :category_id, Category.where(ancestry: nil), :id, :name,{include_blank: "選択してください"} , {id: 'parent_category'}
+            .labelArea4
+              %p.label4 ブランド
+              %span.any4 任意
+            = f.text_field :brand, class: "itemInput4 lineInput4 input4", placeholder: "例）シャネル"
+            .labelArea4
+              %p.label4 商品の状態
+              %span.required4 必須
+            = f.collection_select :condition_id, Condition.all, :id, :name, {include_blank: "選択してください"}, {class: "itemInput4 lineInput4 select4"}
     .ItemForm4__delivery4.borderbottom4
       %p.headline4 配送について
       .labelArea4
@@ -69,10 +75,9 @@
       .priceArea4
         .labelArea4
           %p.label4 販売価格
-          %span.required4 必須
+          %span.lineheight4 必須
         .priceArea4__input4
           %span.enmark4 ¥
           = f.number_field :price, class: "lineInput4 priceInput4 input4", placeholder: "0"
     .ItemForm4__submit4
       = f.submit '出品する', class: "exhibitionBtn4"
-

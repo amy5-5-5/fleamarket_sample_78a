@@ -12,11 +12,12 @@ class Item < ApplicationRecord
   
 
   # あとでアソシエーション記述する（残り、ユーザーモデルとの紐付け。）
+  belongs_to :user
   has_many :images, dependent: :destroy
   accepts_nested_attributes_for :images, allow_destroy: true
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :area
-  belongs_to_active_hash :category
+  belongs_to :category
   belongs_to_active_hash :condition
   belongs_to_active_hash :burden
   belongs_to_active_hash :shipping_date
