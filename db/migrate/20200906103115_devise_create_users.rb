@@ -8,6 +8,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :family_name_furigana,  null: false
       t.string :first_name,            null: false
       t.string :first_name_furigana,   null: false
+      
       ## Database authenticatable
       t.string :email,                 null: false, default: ""
       t.string :encrypted_password,    null: false, default: ""
@@ -18,6 +19,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
 
       ## Rememberable
       t.datetime :remember_created_at
+      t.date :birth_date,          null: false
 
       ## Trackable
       # t.integer  :sign_in_count, default: 0, null: false

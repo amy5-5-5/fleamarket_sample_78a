@@ -7,7 +7,11 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :family_name, :first_name, :family_name_furigana, :first_name_furigana])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :family_name, :first_name, :family_name_furigana, :first_name_furigana, :birth_date])
+  end
+
+  def production?
+    Rails.env.production?
   end
 
   def production?
@@ -20,3 +24,5 @@ class ApplicationController < ActionController::Base
     end
   end
 end
+
+
